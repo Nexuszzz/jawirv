@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jawir OS - Action Confirmation</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#dab80b",
+                        "primary-dark": "#b89b09",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#221f10", // Dark coffee tone
+                        "surface-dark": "#181711",
+                        "border-dark": "#3A382D",
+                        "text-muted": "#bab59c"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom Batik-like trim pattern */
+        .batik-trim {
+            background-color: #dab80b;
+            background-image: 
+                radial-gradient(circle at 100% 150%, #181711 24%, transparent 25%),
+                radial-gradient(circle at 0% 150%, #181711 24%, transparent 25%),
+                radial-gradient(circle at 50% 100%, #181711 10%, transparent 11%),
+                radial-gradient(circle at 100% 50%, #181711 5%, transparent 6%),
+                radial-gradient(circle at 0% 50%, #181711 5%, transparent 6%);
+            background-size: 20px 10px;
+            opacity: 0.8;
+        }
+        
+        /* Blur background for modal focus */
+        .backdrop-blur-custom {
+            backdrop-filter: blur(4px);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white min-h-screen overflow-hidden">
+<!-- Mock Background Dashboard (Context) -->
+<div aria-hidden="true" class="fixed inset-0 z-0 opacity-40 pointer-events-none flex">
+<!-- Sidebar -->
+<div class="w-64 h-full border-r border-border-dark bg-surface-dark hidden md:flex flex-col p-4 gap-4">
+<div class="h-8 w-32 bg-border-dark/50 rounded animate-pulse"></div>
+<div class="space-y-2 mt-4">
+<div class="h-10 w-full bg-border-dark/30 rounded"></div>
+<div class="h-10 w-full bg-border-dark/30 rounded"></div>
+<div class="h-10 w-full bg-border-dark/30 rounded"></div>
+</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 flex flex-col">
+<div class="h-16 border-b border-border-dark bg-surface-dark w-full"></div>
+<div class="p-8 grid grid-cols-3 gap-6">
+<div class="h-32 bg-surface-dark border border-border-dark rounded-xl"></div>
+<div class="h-32 bg-surface-dark border border-border-dark rounded-xl"></div>
+<div class="h-32 bg-surface-dark border border-border-dark rounded-xl"></div>
+<div class="col-span-2 h-64 bg-surface-dark border border-border-dark rounded-xl"></div>
+</div>
+</div>
+</div>
+<!-- Modal Overlay -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#0f0e0a]/60 backdrop-blur-custom">
+<!-- Modal Container -->
+<div class="relative w-full max-w-[520px] bg-[#181711] dark:bg-[#181711] rounded-xl shadow-2xl border border-[#3A382D] overflow-hidden flex flex-col transform transition-all scale-100">
+<!-- Top Border with Batik Trim -->
+<div class="h-3 w-full relative">
+<div class="absolute inset-0 batik-trim"></div>
+</div>
+<!-- Modal Body -->
+<div class="px-8 pt-8 pb-6 flex flex-col gap-6">
+<!-- Headline -->
+<div class="text-center">
+<div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary mb-4">
+<span class="material-symbols-outlined text-[28px]">send</span>
+</div>
+<h2 class="text-white text-2xl font-bold tracking-tight">Konfirmasi Kirim Pesan</h2>
+<p class="text-text-muted text-sm mt-1">Silakan periksa detail pesan sebelum mengirim.</p>
+</div>
+<!-- Detail Block -->
+<div class="bg-[#221f10] border border-[#3A382D] rounded-lg overflow-hidden">
+<!-- Recipient -->
+<div class="p-4 border-b border-[#3A382D] flex items-center justify-between group">
+<div class="flex flex-col">
+<span class="text-[#8e8b7b] text-xs uppercase tracking-wider font-semibold mb-1">Penerima</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-green-500 text-[20px]">chat</span>
+<span class="text-white font-medium text-base">Budi Arsitek</span>
+</div>
+</div>
+<div class="h-8 w-8 rounded-full bg-[#3A382D] flex items-center justify-center">
+<span class="material-symbols-outlined text-text-muted text-sm">person</span>
+</div>
+</div>
+<!-- Message Content -->
+<div class="p-4 bg-[#1c1a14]">
+<span class="text-[#8e8b7b] text-xs uppercase tracking-wider font-semibold mb-2 block">Isi Pesan</span>
+<div class="relative pl-3 border-l-2 border-primary/50">
+<p class="text-gray-200 text-sm leading-relaxed font-normal italic">
+                                "Halo Mas, skematik KiCad sudah siap di Drive. Silakan cek."
+                            </p>
+</div>
+</div>
+</div>
+<!-- Warning -->
+<div class="flex items-start gap-3 bg-yellow-900/10 border border-yellow-900/30 rounded-lg p-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">warning</span>
+<div class="flex flex-col">
+<span class="text-primary text-sm font-semibold">Perhatian</span>
+<p class="text-[#bab59c] text-xs leading-relaxed">
+                            Aksi ini akan mengirim pesan nyata ke nomor WhatsApp tujuan. Pastikan data sudah benar.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Modal Footer / Button Group -->
+<div class="px-8 pb-8 pt-2">
+<div class="grid grid-cols-2 gap-4">
+<!-- Cancel Button -->
+<button class="flex items-center justify-center gap-2 h-11 px-4 rounded-xl border border-[#54503b] hover:bg-[#2A2820] text-[#E0DDD5] transition-colors duration-200 cursor-pointer">
+<span class="material-symbols-outlined text-[20px]">close</span>
+<span class="text-sm font-semibold">Batal</span>
+</button>
+<!-- Confirm Button -->
+<button class="flex items-center justify-center gap-2 h-11 px-4 rounded-xl bg-primary hover:bg-primary-dark text-[#181711] shadow-[0_0_15px_rgba(218,184,11,0.2)] transition-all duration-200 cursor-pointer group">
+<span class="text-sm font-bold">Konfirmasi &amp; Kirim</span>
+<span class="material-symbols-outlined text-[20px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</body></html>

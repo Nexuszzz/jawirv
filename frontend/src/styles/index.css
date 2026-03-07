@@ -1,0 +1,258 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========================================
+   JAWIR OS — Javanese Gold Coffee Theme
+   ======================================== */
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #181711; }
+::-webkit-scrollbar-thumb { background: #393628; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #4a4638; }
+
+/* Selection */
+::selection { background: rgba(218, 184, 11, 0.3); color: #fff; }
+
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
+
+/* ========================================
+   Batik Trim Pattern
+   ======================================== */
+.batik-trim {
+  background-color: #dab80b;
+  background-image:
+    radial-gradient(circle at 8px 8px, rgba(24,23,17,0.15) 2px, transparent 2px),
+    radial-gradient(circle at 0 0, rgba(24,23,17,0.1) 3px, transparent 3px);
+  background-size: 16px 8px, 16px 8px;
+  background-position: 0 0, 8px 4px;
+}
+
+/* ========================================
+   Dot Matrix Background Pattern
+   ======================================== */
+.dot-matrix {
+  background-image: radial-gradient(#dab80b 1px, transparent 1px);
+  background-size: 32px 32px;
+  opacity: 0.05;
+}
+
+/* ========================================
+   Chat Bubbles
+   ======================================== */
+.bubble-user {
+  @apply bg-primary text-background-dark rounded-2xl px-5 py-3 shadow-md;
+  border-bottom-right-radius: 4px;
+}
+
+.bubble-bot {
+  @apply bg-coffee-medium rounded-2xl px-5 py-3 border border-coffee-light shadow-sm;
+  border-bottom-left-radius: 4px;
+  color: #f1f0ea !important;
+}
+
+.bubble-bot * {
+  color: #f1f0ea !important;
+}
+
+.bubble-bot strong {
+  color: #dab80b !important;
+}
+
+.bubble-bot em {
+  color: #bab59c !important;
+}
+
+.bubble-bot code {
+  color: #dab80b !important;
+  background: rgba(0,0,0,0.3) !important;
+}
+
+/* ========================================
+   Material Symbols
+   ======================================== */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  font-family: 'Material Symbols Outlined';
+}
+
+.icon-filled {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* ========================================
+   Animations
+   ======================================== */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-slide-in,
+.animate-slide-in-right {
+  animation: slideInRight 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+/* ReAct step entrance */
+@keyframes stepEnter {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.react-step-enter,
+.animate-step-enter {
+  animation: stepEnter 0.3s ease-out forwards;
+}
+
+/* Pulse ring for mic */
+@keyframes pulseRing {
+  0% { transform: scale(1); opacity: 0.4; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+.animate-pulse-ring {
+  animation: pulseRing 1.5s ease-out infinite;
+}
+
+/* Waveform bar animation */
+@keyframes waveformBar {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+}
+
+/* ========================================
+   ReAct Panel
+   ======================================== */
+.react-iteration {
+  @apply border border-coffee-light rounded-xl overflow-hidden;
+}
+
+.react-iteration-header {
+  @apply px-4 py-2.5 bg-coffee-medium border-b border-coffee-light flex items-center gap-3;
+}
+
+.react-step {
+  @apply px-4 py-3 border-b border-coffee-light/50 last:border-b-0 flex gap-3;
+}
+
+/* ========================================
+   Tool Cards
+   ======================================== */
+.tool-card {
+  @apply bg-coffee-medium border border-coffee-light rounded-xl p-4 
+         hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5
+         transition-all duration-300 cursor-pointer;
+}
+
+.tool-card:hover {
+  transform: translateY(-2px);
+}
+
+.tool-card-icon {
+  @apply w-10 h-10 rounded-lg flex items-center justify-center text-lg;
+}
+
+/* ========================================
+   Status Badge
+   ======================================== */
+.status-badge {
+  @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider;
+}
+
+.status-connected {
+  @apply bg-green-500/10 text-green-400 border border-green-500/20;
+}
+
+.status-disconnected {
+  @apply bg-red-500/10 text-red-400 border border-red-500/20;
+}
+
+.status-thinking {
+  @apply bg-primary/10 text-primary border border-primary/20;
+}
+
+/* ========================================
+   Custom Toggle (checkbox-based)
+   ======================================== */
+.toggle-switch {
+  @apply relative inline-flex items-center cursor-pointer;
+}
+
+.toggle-switch input {
+  @apply sr-only;
+}
+
+.toggle-slider {
+  @apply relative w-11 h-6 bg-coffee-light rounded-full transition-colors;
+}
+
+.toggle-slider::after {
+  content: '';
+  @apply absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full transition-transform shadow-sm;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+  @apply bg-primary;
+}
+
+.toggle-switch input:checked + .toggle-slider::after {
+  transform: translateX(20px);
+}
+
+/* ========================================
+   Markdown Content in Messages
+   ======================================== */
+.msg-content p { margin-bottom: 0.5em; }
+.msg-content p:last-child { margin-bottom: 0; }
+.msg-content code {
+  @apply bg-coffee-medium/50 text-primary px-1.5 py-0.5 rounded text-sm font-mono;
+}
+.msg-content pre {
+  @apply bg-coffee-dark border border-coffee-light rounded-lg p-3 my-2 overflow-x-auto;
+}
+.msg-content pre code {
+  @apply bg-transparent p-0 text-cream;
+}
+.msg-content ul, .msg-content ol {
+  @apply pl-5 my-1;
+}
+.msg-content li { @apply mb-0.5; }
+.msg-content strong { @apply font-bold text-white; }
+.msg-content a {
+  @apply text-primary underline hover:text-primary-hover;
+}
+
+/* Dark msg content (for bot bubbles on cream bg) */
+.msg-content-dark code {
+  @apply bg-background-dark/10 text-background-dark;
+}
+.msg-content-dark pre {
+  @apply bg-background-dark/10 border-background-dark/20;
+}
+.msg-content-dark pre code {
+  @apply text-background-dark;
+}
+.msg-content-dark strong { @apply font-bold text-background-dark; }
+.msg-content-dark a {
+  @apply text-primary-dark underline;
+}

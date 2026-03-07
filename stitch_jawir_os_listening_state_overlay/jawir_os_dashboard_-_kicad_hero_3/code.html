@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jawir OS - Voice &amp; Mic Settings</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#dab80b",
+                        "primary-hover": "#bfa10a",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#221f10",
+                        "coffee-dark": "#181711",
+                        "coffee-medium": "#2d2a1e",
+                        "coffee-light": "#393628",
+                        "cream": "#f1f0ea",
+                        "cream-muted": "#bab59c",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px
+        }
+        ::-webkit-scrollbar-track {
+            background: #181711
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #393628;
+            border-radius: 4px
+        }
+        .batik-trim {
+            background-color: #dab80b;
+            background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuASLlPyJf_OkIRQ5Mnkucw-ITiq-CrAc7F8RLXyngY-cPhvY5mvAvWLq2LU7VpbDt3nSkrNSjFlneCHK6BQbpzxIRwaoJWnTygZJC9sOkUYWawlAuBqzzxVAcg9ofJsTjKMrIhA2RkBVxcN7--c-kfFbvZ4__tNw5RZke3sPlwthJurTVhrtpwEJI_K2JT5E0ofgGmKc2_uN9_fHuyBVcFRSjMbnGWFe23OBCqqcf5feyR85IcgmYFXOFYGZ1ghOQCQibodALH0efWQ");
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            background: #dab80b;
+            margin-top: -6px;
+            cursor: pointer;
+            box-shadow: 0 0 0 4px rgba(218, 184, 11, 0.2);
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: #393628;
+            border-radius: 2px;
+        }
+        .visualizer-bar {
+            width: 6px;
+            background-color: #dab80b;
+            border-radius: 4px;
+            transition: height 0.1s ease;
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-white font-display overflow-hidden h-screen flex flex-col">
+<header class="flex-none z-50 bg-coffee-dark border-b border-coffee-light relative">
+<div class="absolute top-0 left-0 w-full h-1.5 batik-trim"></div>
+<div class="px-6 py-3 flex items-center justify-between mt-1.5">
+<div class="flex items-center gap-4">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-4xl">spa</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-white">Jawir OS</h1>
+</div>
+<div class="hidden md:flex items-center justify-center">
+<div class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-coffee-light border border-coffee-medium shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">settings</span>
+<span class="text-xs font-semibold text-primary uppercase tracking-wider">Mode Pengaturan</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex gap-1">
+<button class="p-2 rounded-lg text-white bg-coffee-light transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="p-2 rounded-lg text-cream-muted hover:text-white hover:bg-coffee-light transition-colors">
+<span class="material-symbols-outlined">history_edu</span>
+</button>
+</div>
+<div class="h-6 w-px bg-coffee-light mx-2"></div>
+<div class="size-9 rounded-full bg-cover bg-center border border-coffee-light" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnsHrsccBN9SckTBcb0FzP0SvKB4uBwghssMaUQT4vyjmG07Aw4jD0Exl9GRJ5Ov2Oyp9n5zyM1q-hGnZqjs-LHlO_Gx_l0kes1z9DxlezeMItPW-Im6XVEiaI43QO399_dkRoRxoWqRjufe1hza-tmdEyJIgnPZiaPLNUW081UH6nHY9hvDv3_6fp9L3TUG8LYBjCducZs511VfeEAUwL12EpuSSxPM6DmBU_2PaGdfOtuFsssW0TP-J3xRUhMZz10W5hNak6y2YR");'></div>
+</div>
+</div>
+</header>
+<div class="flex-1 flex overflow-hidden">
+<aside class="w-full md:w-[280px] lg:w-[320px] flex flex-col border-r border-coffee-light bg-[#1c1912] relative z-20 shadow-xl">
+<div class="p-6">
+<h2 class="text-xs font-bold text-cream-muted uppercase tracking-widest mb-6 px-2">Kategori Pengaturan</h2>
+<nav class="space-y-2">
+<button class="w-full flex items-center gap-3 px-4 py-3 rounded-xl bg-primary text-background-dark shadow-lg shadow-primary/20 text-left">
+<span class="material-symbols-outlined text-[22px]">mic</span>
+<span class="font-bold">Suara &amp; Mikrofon</span>
+</button>
+<button class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-cream-muted hover:text-white hover:bg-coffee-light transition-all text-left group">
+<span class="material-symbols-outlined text-[22px] group-hover:text-primary transition-colors">hub</span>
+<span class="font-medium">Integrasi Layanan</span>
+</button>
+<button class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-cream-muted hover:text-white hover:bg-coffee-light transition-all text-left group">
+<span class="material-symbols-outlined text-[22px] group-hover:text-primary transition-colors">security</span>
+<span class="font-medium">Keamanan</span>
+</button>
+<button class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-cream-muted hover:text-white hover:bg-coffee-light transition-all text-left group">
+<span class="material-symbols-outlined text-[22px] group-hover:text-primary transition-colors">palette</span>
+<span class="font-medium">Tampilan</span>
+</button>
+<button class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-cream-muted hover:text-white hover:bg-coffee-light transition-all text-left group">
+<span class="material-symbols-outlined text-[22px] group-hover:text-primary transition-colors">info</span>
+<span class="font-medium">Tentang Jawir OS</span>
+</button>
+</nav>
+</div>
+<div class="mt-auto p-6 border-t border-coffee-light">
+<div class="bg-coffee-medium rounded-xl p-4 border border-coffee-light flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">auto_awesome</span>
+<div>
+<p class="text-sm font-bold text-white">Jawir OS Pro</p>
+<p class="text-xs text-cream-muted">v2.4.0 (Stable)</p>
+</div>
+</div>
+</div>
+</aside>
+<main class="flex-1 bg-background-dark flex flex-col min-w-0 relative overflow-hidden">
+<div class="absolute inset-0 z-0 pointer-events-none opacity-5" style="background-image: radial-gradient(#dab80b 1px, transparent 1px); background-size: 32px 32px;"></div>
+<div class="h-1 w-full bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+<div class="relative z-10 flex flex-col h-full overflow-y-auto">
+<div class="p-8 lg:p-12 max-w-5xl mx-auto w-full space-y-10">
+<div class="flex items-end justify-between border-b border-coffee-light pb-6">
+<div>
+<h2 class="text-3xl font-bold text-white mb-2 tracking-tight">Suara &amp; Mikrofon</h2>
+<p class="text-cream-muted text-lg">Konfigurasi input audio, output suara sintesis, dan deteksi suara.</p>
+</div>
+</div>
+<div class="space-y-8">
+<div class="bg-coffee-medium rounded-2xl border border-coffee-light p-6 lg:p-8 relative overflow-hidden shadow-lg">
+<div class="flex items-start justify-between mb-6">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary border border-primary/20">
+<span class="material-symbols-outlined text-2xl">mic</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-white">Perangkat Input</h3>
+<p class="text-sm text-cream-muted">Pilih mikrofon utama untuk interaksi suara.</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-end">
+<div class="space-y-2">
+<label class="block text-sm font-medium text-cream-muted uppercase tracking-wide">Microphone</label>
+<div class="relative">
+<select class="w-full bg-coffee-dark border border-coffee-light rounded-xl px-4 py-3 text-white appearance-none focus:ring-1 focus:ring-primary focus:border-primary outline-none cursor-pointer">
+<option>Default - MacBook Pro Microphone</option>
+<option selected="">HyperX QuadCast S (USB)</option>
+<option>AirPods Pro</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-cream-muted">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+<div class="bg-coffee-dark border border-coffee-light rounded-xl p-4 h-[50px] flex items-center justify-center gap-1.5 overflow-hidden">
+<div class="visualizer-bar h-3"></div>
+<div class="visualizer-bar h-5"></div>
+<div class="visualizer-bar h-8"></div>
+<div class="visualizer-bar h-4"></div>
+<div class="visualizer-bar h-6"></div>
+<div class="visualizer-bar h-2"></div>
+<div class="visualizer-bar h-5"></div>
+<div class="visualizer-bar h-7"></div>
+<div class="visualizer-bar h-3"></div>
+<div class="visualizer-bar h-6"></div>
+<div class="visualizer-bar h-4"></div>
+<div class="visualizer-bar h-8"></div>
+<div class="visualizer-bar h-5"></div>
+<div class="visualizer-bar h-2"></div>
+<div class="visualizer-bar h-6"></div>
+<div class="visualizer-bar h-3"></div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="bg-coffee-medium rounded-2xl border border-coffee-light p-6 relative overflow-hidden shadow-lg flex flex-col">
+<div class="flex items-center gap-4 mb-6">
+<div class="size-10 rounded-lg bg-coffee-light flex items-center justify-center text-cream-muted border border-coffee-light/50">
+<span class="material-symbols-outlined">keyboard_voice</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-white">Push-to-Talk</h3>
+<p class="text-sm text-cream-muted">Tombol pintas aktivasi suara.</p>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-center items-center bg-coffee-dark border border-coffee-light rounded-xl p-6 mb-4">
+<span class="text-xs font-semibold text-cream-muted uppercase mb-2">Hotkey Aktif</span>
+<div class="text-3xl font-bold text-primary tracking-widest font-display">SPACEBAR</div>
+</div>
+<button class="w-full py-2.5 px-4 rounded-xl bg-coffee-light hover:bg-[#3d3a2e] text-white font-medium transition-colors border border-transparent hover:border-coffee-light/50 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">edit</span>
+                                    Ubah Tombol
+                                </button>
+</div>
+<div class="bg-coffee-medium rounded-2xl border border-coffee-light p-6 relative overflow-hidden shadow-lg flex flex-col">
+<div class="flex items-center gap-4 mb-6">
+<div class="size-10 rounded-lg bg-coffee-light flex items-center justify-center text-cream-muted border border-coffee-light/50">
+<span class="material-symbols-outlined">record_voice_over</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-white">Model Suara</h3>
+<p class="text-sm text-cream-muted">Personalisasi suara asisten Jawir.</p>
+</div>
+</div>
+<div class="space-y-4 mb-4">
+<label class="block text-sm font-medium text-cream-muted uppercase tracking-wide">Pilih Karakter</label>
+<div class="relative">
+<select class="w-full bg-coffee-dark border border-coffee-light rounded-xl px-4 py-3 text-white appearance-none focus:ring-1 focus:ring-primary focus:border-primary outline-none cursor-pointer">
+<option>Budi - Deep Male (Javanese Accent)</option>
+<option>Siti - Soft Female</option>
+<option>Agus - Energetic Male</option>
+<option>Rina - Professional Female</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-cream-muted">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-coffee-dark border border-coffee-light">
+<div class="flex items-center gap-3">
+<button class="size-8 rounded-full bg-primary text-coffee-dark flex items-center justify-center hover:bg-primary-hover transition-colors">
+<span class="material-symbols-outlined text-lg">play_arrow</span>
+</button>
+<span class="text-sm text-white">Pratinjau Suara</span>
+</div>
+<div class="flex gap-0.5 items-end h-4">
+<span class="w-1 h-2 bg-coffee-light rounded-full"></span>
+<span class="w-1 h-3 bg-coffee-light rounded-full"></span>
+<span class="w-1 h-2 bg-coffee-light rounded-full"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-coffee-medium rounded-2xl border border-coffee-light p-6 lg:p-8 relative overflow-hidden shadow-lg">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-cream-muted text-2xl">tune</span>
+<h3 class="text-xl font-bold text-white">Pengaturan Lanjutan</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="flex items-center justify-between p-4 rounded-xl bg-coffee-dark border border-coffee-light">
+<div class="space-y-1">
+<div class="font-bold text-white flex items-center gap-2">
+                                        Noise Suppression
+                                        <span class="text-[10px] bg-primary/20 text-primary px-1.5 py-0.5 rounded border border-primary/20 uppercase">Beta</span>
+</div>
+<p class="text-xs text-cream-muted">Kurangi kebisingan latar belakang.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-coffee-light peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between p-4 rounded-xl bg-coffee-dark border border-coffee-light">
+<div class="space-y-1">
+<div class="font-bold text-white">Echo Cancellation</div>
+<p class="text-xs text-cream-muted">Mencegah umpan balik audio.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-coffee-light peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<div class="h-8"></div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

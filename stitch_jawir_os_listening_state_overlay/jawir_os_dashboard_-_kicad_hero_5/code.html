@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jawir OS - IoT Monitor &amp; MQTT Logs</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#dab80b",
+                        "primary-hover": "#bfa10a",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#221f10",
+                        "coffee-dark": "#181711",
+                        "coffee-medium": "#2d2a1e",
+                        "coffee-light": "#393628",
+                        "cream": "#f1f0ea",
+                        "cream-muted": "#bab59c",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'fade-in-up': 'fadeInUp 0.5s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+<style>::-webkit-scrollbar {
+            width: 8px;
+            height: 8px
+        }
+        ::-webkit-scrollbar-track {
+            background: #181711
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #393628;
+            border-radius: 4px
+        }.batik-trim {
+            background-color: #dab80b;
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuASLlPyJf_OkIRQ5Mnkucw-ITiq-CrAc7F8RLXyngY-cPhvY5mvAvWLq2LU7VpbDt3nSkrNSjFlneCHK6BQbpzxIRwaoJWnTygZJC9sOkUYWawlAuBqzzxVAcg9ofJsTjKMrIhA2RkBVxcN7--c-kfFbvZ4__tNw5RZke3sPlwthJurTVhrtpwEJI_K2JT5E0ofgGmKc2_uN9_fHuyBVcFRSjMbnGWFe23OBCqqcf5feyR85IcgmYFXOFYGZ1ghOQCQibodALH0efWQ)
+        }.toggle-checkbox:checked {
+            right: 0;
+            border-color: #dab80b;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #dab80b;
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-white font-display overflow-hidden h-screen flex flex-col">
+<header class="flex-none z-50 bg-coffee-dark border-b border-coffee-light relative">
+<div class="absolute top-0 left-0 w-full h-1.5 batik-trim"></div>
+<div class="px-6 py-3 flex items-center justify-between mt-1.5">
+<div class="flex items-center gap-4">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-4xl">spa</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-white">Jawir OS</h1>
+</div>
+<div class="hidden md:flex items-center justify-center">
+<div class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-coffee-light border border-coffee-medium shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px] animate-pulse-slow">hub</span>
+<span class="text-xs font-semibold text-primary uppercase tracking-wider">Monitoring Devices</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex gap-1">
+<button class="p-2 rounded-lg text-cream-muted hover:text-white hover:bg-coffee-light transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="p-2 rounded-lg text-cream-muted hover:text-white hover:bg-coffee-light transition-colors">
+<span class="material-symbols-outlined">history_edu</span>
+</button>
+</div>
+<div class="h-6 w-px bg-coffee-light mx-2"></div>
+<div class="size-9 rounded-full bg-cover bg-center border border-coffee-light" data-alt="User profile picture showing a minimalist avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnsHrsccBN9SckTBcb0FzP0SvKB4uBwghssMaUQT4vyjmG07Aw4jD0Exl9GRJ5Ov2Oyp9n5zyM1q-hGnZqjs-LHlO_Gx_l0kes1z9DxlezeMItPW-Im6XVEiaI43QO399_dkRoRxoWqRjufe1hza-tmdEyJIgnPZiaPLNUW081UH6nHY9hvDv3_6fp9L3TUG8LYBjCducZs511VfeEAUwL12EpuSSxPM6DmBU_2PaGdfOtuFsssW0TP-J3xRUhMZz10W5hNak6y2YR");'></div>
+</div>
+</div>
+</header>
+<div class="flex-1 flex overflow-hidden">
+<aside class="w-full md:w-[420px] lg:w-[480px] flex flex-col border-r border-coffee-light bg-[#1c1912] relative z-20 shadow-xl hidden md:flex">
+<div class="flex-1 overflow-y-auto p-4 space-y-6">
+<div class="flex items-center gap-4 py-2 opacity-60">
+<div class="h-px bg-coffee-light flex-1"></div>
+<span class="text-xs font-medium text-cream-muted uppercase tracking-widest">Hari Ini</span>
+<div class="h-px bg-coffee-light flex-1"></div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<div class="flex items-end gap-3 max-w-[90%]">
+<div class="bg-coffee-light text-cream rounded-2xl rounded-br-none px-5 py-3 shadow-sm border border-[#4a4638]">
+<p class="text-sm font-normal leading-relaxed">Sugeng siang, Wir. Cek status perangkat IoT di lab sekarang.</p>
+</div>
+<div class="size-8 shrink-0 rounded-full bg-cover bg-center" data-alt="User avatar small" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC7-9-zE4yLatm9BdySlBJZPIeRsxR6t2c1q3EDQVwVThJZ3AIaR0c7UkSntNXkViuYkP3rbnOqZVaM9E5cUmAdQOaMny8e9VwGv4zEO-9A404geLKfJlWbuZlV7pCNscy2Pri7dUU3rO5cIm3mV6OSxuONhF19egDgrfoDpV8uw0H0lThWTRLikbUWOejb8K_Bnic-C5f7MdMIaC872mieovCkkxVEnAHS8PQz16Tl33oKbIq46ti4H9Qg34VmfSZqEvmstgyAaYf9");'></div>
+</div>
+<span class="text-[10px] text-cream-muted mr-12">01:14 PM</span>
+</div>
+<div class="flex flex-col items-start gap-1">
+<div class="flex items-end gap-3 max-w-[90%]">
+<div class="size-8 shrink-0 flex items-center justify-center rounded-full bg-primary text-background-dark">
+<span class="material-symbols-outlined text-[18px]">smart_toy</span>
+</div>
+<div class="bg-cream text-background-dark rounded-2xl rounded-bl-none px-5 py-3 shadow-md">
+<p class="text-sm font-medium leading-relaxed">Siap. Tab <span class="font-bold">IoT Monitor</span> sudah saya buka. Solder Station masih menyala, hati-hati nggih.</p>
+</div>
+</div>
+<span class="text-[10px] text-cream-muted ml-12">01:15 PM</span>
+</div>
+</div>
+<div class="p-4 bg-coffee-dark border-t border-coffee-light">
+<div class="flex items-center gap-3">
+<div class="relative flex-1">
+<input class="w-full bg-coffee-medium text-white placeholder-cream-muted rounded-xl border-none py-3.5 pl-4 pr-12 focus:ring-2 focus:ring-primary focus:outline-none transition-all shadow-inner text-sm" placeholder="Ketik perintah di sini..." type="text"/>
+<button class="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 text-cream-muted hover:text-primary transition-colors">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+<button class="size-12 rounded-xl bg-gradient-to-br from-primary to-[#bfa10a] text-background-dark flex items-center justify-center shadow-lg shadow-primary/20 hover:scale-105 active:scale-95 transition-all group">
+<span class="material-symbols-outlined text-2xl group-active:animate-pulse">mic</span>
+</button>
+</div>
+<div class="text-center mt-2">
+<p class="text-[10px] text-cream-muted opacity-50">Tahan tombol mikrofon untuk bicara (Bahasa Jawa/Indonesia)</p>
+</div>
+</div>
+</aside>
+<main class="flex-1 bg-background-dark flex flex-col min-w-0 relative">
+<div class="absolute inset-0 z-0 pointer-events-none opacity-5" style="background-image: radial-gradient(#dab80b 1px, transparent 1px); background-size: 32px 32px;"></div>
+<div class="relative z-10 flex flex-col h-full p-6 lg:p-10 gap-8 overflow-y-auto">
+<div class="flex items-center gap-6 border-b border-coffee-light pb-1 overflow-x-auto no-scrollbar flex-none">
+<button class="flex items-center gap-2 pb-3 border-b-2 border-transparent text-cream-muted hover:text-white transition-colors font-medium whitespace-nowrap px-1">
+<span class="material-symbols-outlined text-[20px]">developer_board</span>
+                        KiCad PCB
+                    </button>
+<button class="flex items-center gap-2 pb-3 border-b-2 border-transparent text-cream-muted hover:text-white transition-colors font-medium whitespace-nowrap px-1">
+<span class="material-symbols-outlined text-[20px]">language</span>
+                        Browser
+                    </button>
+<button class="flex items-center gap-2 pb-3 border-b-2 border-transparent text-cream-muted hover:text-white transition-colors font-medium whitespace-nowrap px-1">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+                        WhatsApp
+                    </button>
+<button class="flex items-center gap-2 pb-3 border-b-2 border-transparent text-cream-muted hover:text-white transition-colors font-medium whitespace-nowrap px-1">
+<span class="material-symbols-outlined text-[20px]">folder_shared</span>
+                        Google Drive
+                    </button>
+<button class="flex items-center gap-2 pb-3 border-b-2 border-primary text-primary font-medium whitespace-nowrap px-1">
+<span class="material-symbols-outlined text-[20px]">sensors</span>
+                        IoT Monitor
+                    </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 animate-fade-in-up flex-none">
+<div class="bg-gradient-to-br from-[#fffefb] to-[#f1f0ea] rounded-2xl p-6 text-coffee-dark border border-primary/40 shadow-xl shadow-primary/5 flex flex-col relative overflow-hidden group hover:border-primary/60 transition-colors">
+<div class="absolute top-0 right-0 p-4 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-8xl">thermometer</span>
+</div>
+<div class="flex items-center justify-between mb-6 relative z-10">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-xl bg-white border border-gray-200 flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-orange-600">local_fire_department</span>
+</div>
+<div>
+<h3 class="font-bold text-lg leading-tight">Solder Station</h3>
+<p class="text-xs text-gray-500 font-medium">Workbench A</p>
+</div>
+</div>
+<div class="px-2.5 py-1 rounded-full border border-primary/40 bg-white shadow-sm flex items-center gap-1.5">
+<span class="size-2 rounded-full bg-green-500 animate-pulse"></span>
+<span class="text-[10px] font-bold tracking-wide uppercase text-coffee-medium">Active</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center py-4 relative z-10">
+<div class="relative size-32 flex items-center justify-center">
+<svg class="size-full -rotate-90 transform" viewBox="0 0 36 36">
+<path class="text-gray-200" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<path class="text-orange-500 drop-shadow-md" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="85, 100" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-3xl font-bold text-coffee-dark">350<span class="text-lg align-top">°C</span></span>
+<span class="text-[10px] text-gray-500 font-mono">SET: 350°C</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-gray-200/50 flex items-center justify-between relative z-10">
+<span class="text-sm font-semibold text-gray-600">Power Status</span>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-primary appearance-none cursor-pointer transition-all duration-300 transform translate-x-full checked:translate-x-0 outline-none" id="toggle-solder" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-primary/20 cursor-pointer border border-primary/30" for="toggle-solder"></label>
+</div>
+</div>
+</div>
+<div class="bg-gradient-to-br from-[#fffefb] to-[#f1f0ea] rounded-2xl p-6 text-coffee-dark border border-primary/40 shadow-xl shadow-primary/5 flex flex-col relative overflow-hidden group hover:border-primary/60 transition-colors">
+<div class="absolute top-0 right-0 p-4 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-8xl">print</span>
+</div>
+<div class="flex items-center justify-between mb-6 relative z-10">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-xl bg-white border border-gray-200 flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-blue-600">print_connect</span>
+</div>
+<div>
+<h3 class="font-bold text-lg leading-tight">3D Printer</h3>
+<p class="text-xs text-gray-500 font-medium">Ender 3 V2</p>
+</div>
+</div>
+<div class="px-2.5 py-1 rounded-full border border-primary/40 bg-white shadow-sm flex items-center gap-1.5">
+<span class="size-2 rounded-full bg-blue-500 animate-pulse"></span>
+<span class="text-[10px] font-bold tracking-wide uppercase text-coffee-medium">Printing</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-center gap-2 relative z-10 px-2">
+<div class="flex justify-between items-end mb-1">
+<span class="text-sm font-medium text-gray-600">Enclosure Box v2.gcode</span>
+<span class="text-2xl font-bold text-primary">75%</span>
+</div>
+<div class="h-3 w-full bg-gray-200 rounded-full overflow-hidden shadow-inner">
+<div class="h-full bg-gradient-to-r from-primary to-yellow-400 w-3/4 rounded-full relative">
+<div class="absolute inset-0 bg-white/20 w-full h-full animate-[shimmer_2s_infinite]"></div>
+</div>
+</div>
+<div class="flex justify-between items-center mt-2 text-xs text-gray-500">
+<span>Layer: 142/189</span>
+<span>~35m remaining</span>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-gray-200/50 grid grid-cols-2 gap-2 relative z-10">
+<button class="flex items-center justify-center gap-1 py-2 rounded-lg bg-white border border-gray-200 text-xs font-semibold hover:bg-gray-50 transition-colors">
+<span class="material-symbols-outlined text-base text-red-500">stop</span>
+                                Stop
+                            </button>
+<button class="flex items-center justify-center gap-1 py-2 rounded-lg bg-white border border-gray-200 text-xs font-semibold hover:bg-gray-50 transition-colors">
+<span class="material-symbols-outlined text-base text-gray-600">pause</span>
+                                Pause
+                            </button>
+</div>
+</div>
+<div class="bg-gradient-to-br from-[#fffefb] to-[#f1f0ea] rounded-2xl p-6 text-coffee-dark border border-primary/40 shadow-xl shadow-primary/5 flex flex-col relative overflow-hidden group hover:border-primary/60 transition-colors">
+<div class="absolute top-0 right-0 p-4 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-8xl">lightbulb</span>
+</div>
+<div class="flex items-center justify-between mb-6 relative z-10">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-xl bg-white border border-gray-200 flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-yellow-600">lightbulb</span>
+</div>
+<div>
+<h3 class="font-bold text-lg leading-tight">Lab Lights</h3>
+<p class="text-xs text-gray-500 font-medium">Main Overhead</p>
+</div>
+</div>
+<div class="px-2.5 py-1 rounded-full border border-primary/40 bg-white shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-yellow-600">bolt</span>
+<span class="text-[10px] font-bold tracking-wide uppercase text-coffee-medium">Online</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center py-4 relative z-10">
+<button class="group/btn relative size-24 rounded-full bg-gradient-to-br from-white to-gray-100 shadow-[0_4px_10px_rgba(0,0,0,0.1),inset_0_-2px_4px_rgba(0,0,0,0.05)] border border-gray-100 flex items-center justify-center transition-transform active:scale-95">
+<span class="material-symbols-outlined text-5xl text-gray-300 group-hover/btn:text-yellow-400 transition-colors duration-300">tungsten</span>
+<div class="absolute inset-0 rounded-full border-4 border-transparent group-hover/btn:border-yellow-400/20 transition-all"></div>
+</button>
+<p class="mt-4 text-sm font-medium text-gray-500">Tap to toggle manual override</p>
+</div>
+<div class="mt-6 pt-4 border-t border-gray-200/50 flex items-center justify-between relative z-10">
+<span class="text-sm font-semibold text-gray-600">Main Switch</span>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-primary appearance-none cursor-pointer transition-all duration-300 transform translate-x-full checked:translate-x-0 outline-none" id="toggle-lights" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer border border-gray-300" for="toggle-lights"></label>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 animate-fade-in-up" style="animation-delay: 100ms;">
+<div class="bg-gradient-to-br from-[#fffefb] to-[#f1f0ea] rounded-2xl border border-primary/30 shadow-lg shadow-black/10 flex flex-col overflow-hidden h-[400px]">
+<div class="px-6 py-4 border-b border-coffee-light/10 flex items-center justify-between bg-gradient-to-r from-cream to-[#eaddcf]/30">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">terminal</span>
+<h2 class="font-bold text-coffee-dark">MQTT Live Logs</h2>
+</div>
+<div class="flex items-center gap-3">
+<div class="relative">
+<select class="pl-3 pr-8 py-1.5 text-xs rounded-lg border border-coffee-light/20 bg-white/60 focus:ring-1 focus:ring-primary focus:border-primary text-coffee-dark outline-none cursor-pointer appearance-none font-medium">
+<option>All Devices</option>
+<option>Solder Station</option>
+<option>3D Printer</option>
+<option>Lab Lights</option>
+<option>Security</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-[16px] pointer-events-none text-coffee-light">expand_more</span>
+</div>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg border border-red-200 bg-red-50 text-red-600 hover:bg-red-100 transition-colors text-xs font-semibold">
+<span class="material-symbols-outlined text-[16px]">backspace</span>
+                            Clear
+                        </button>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto bg-[#faf9f6]">
+<table class="w-full text-left border-collapse">
+<thead class="bg-coffee-light/5 text-xs uppercase tracking-wider text-coffee-light font-medium sticky top-0 backdrop-blur-sm z-10 shadow-sm">
+<tr>
+<th class="px-6 py-3 font-semibold border-b border-coffee-light/10">Timestamp</th>
+<th class="px-4 py-3 font-semibold border-b border-coffee-light/10">Topic / Device</th>
+<th class="px-4 py-3 font-semibold border-b border-coffee-light/10">Payload</th>
+</tr>
+</thead>
+<tbody class="text-xs font-mono divide-y divide-coffee-light/5">
+<tr class="hover:bg-primary/5 transition-colors group">
+<td class="px-6 py-3 whitespace-nowrap text-cream-muted">
+<div class="flex items-center gap-3">
+<span class="size-2 rounded-full bg-primary shadow-[0_0_8px_rgba(218,184,11,0.5)]"></span>
+                                        14:15:22
+                                    </div>
+</td>
+<td class="px-4 py-3 text-coffee-dark font-bold">jawir/lab/solder</td>
+<td class="px-4 py-3 text-gray-600">{"temp": 350, "status": "stable"}</td>
+</tr>
+<tr class="hover:bg-primary/5 transition-colors group">
+<td class="px-6 py-3 whitespace-nowrap text-cream-muted">
+<div class="flex items-center gap-3">
+<span class="size-2 rounded-full bg-primary shadow-[0_0_8px_rgba(218,184,11,0.5)]"></span>
+                                        14:15:20
+                                    </div>
+</td>
+<td class="px-4 py-3 text-coffee-dark font-bold">jawir/lab/printer</td>
+<td class="px-4 py-3 text-gray-600">progress_update: 75%</td>
+</tr>
+<tr class="hover:bg-red-50 transition-colors group bg-red-50/30">
+<td class="px-6 py-3 whitespace-nowrap text-cream-muted">
+<div class="flex items-center gap-3">
+<span class="size-2 rounded-full bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.4)]"></span>
+                                        14:14:55
+                                    </div>
+</td>
+<td class="px-4 py-3 text-red-700 font-bold">jawir/security/door</td>
+<td class="px-4 py-3 text-red-600">ALERT: Main door opened</td>
+</tr>
+<tr class="hover:bg-primary/5 transition-colors group">
+<td class="px-6 py-3 whitespace-nowrap text-cream-muted">
+<div class="flex items-center gap-3">
+<span class="size-2 rounded-full bg-primary shadow-[0_0_8px_rgba(218,184,11,0.5)]"></span>
+                                        14:14:30
+                                    </div>
+</td>
+<td class="px-4 py-3 text-coffee-dark font-bold">jawir/lab/lights</td>
+<td class="px-4 py-3 text-gray-600">state: ON, brightness: 100%</td>
+</tr>
+<tr class="hover:bg-primary/5 transition-colors group">
+<td class="px-6 py-3 whitespace-nowrap text-cream-muted">
+<div class="flex items-center gap-3">
+<span class="size-2 rounded-full bg-primary shadow-[0_0_8px_rgba(218,184,11,0.5)]"></span>
+                                        14:14:10
+                                    </div>
+</td>
+<td class="px-4 py-3 text-coffee-dark font-bold">jawir/lab/printer</td>
+<td class="px-4 py-3 text-gray-600">progress_update: 74%</td>
+</tr>
+<tr class="hover:bg-primary/5 transition-colors group">
+<td class="px-6 py-3 whitespace-nowrap text-cream-muted">
+<div class="flex items-center gap-3">
+<span class="size-2 rounded-full bg-primary shadow-[0_0_8px_rgba(218,184,11,0.5)]"></span>
+                                        14:13:45
+                                    </div>
+</td>
+<td class="px-4 py-3 text-coffee-dark font-bold">jawir/env/temp</td>
+<td class="px-4 py-3 text-gray-600">24.5°C</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="mt-auto pt-8 flex items-center justify-center opacity-30">
+<div class="flex items-center gap-4">
+<div class="h-px w-24 bg-gradient-to-r from-transparent to-primary"></div>
+<span class="material-symbols-outlined text-primary text-sm">spa</span>
+<div class="h-px w-24 bg-gradient-to-l from-transparent to-primary"></div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<style>
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+    </style>
+</body></html>

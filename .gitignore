@@ -1,0 +1,129 @@
+# JAWIR OS - Root Git Ignore
+
+# ============================================
+# PENTING: API KEYS & SECRETS
+# ============================================
+.env
+.env.*
+.env.local
+.env.*.local
+*.env
+**/.env
+**/.env.*
+
+# ============================================
+# Python
+# ============================================
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+**/venv/
+ENV/
+env/
+.venv/
+Lib/
+Scripts/
+pyvenv.cfg
+
+# ============================================
+# Node.js
+# ============================================
+node_modules/
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Build outputs
+dist/
+**/dist/
+release/
+**/release/
+
+# ============================================
+# IDE & Editors
+# ============================================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.sublime-*
+
+# ============================================
+# OS Files
+# ============================================
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ============================================
+# Logs & Cache
+# ============================================
+*.log
+logs/
+.cache/
+.pytest_cache/
+**/.pytest_cache/
+
+# ============================================
+# Database
+# ============================================
+*.db
+*.sqlite
+*.sqlite3
+
+# ============================================
+# Backend specific
+# ============================================
+backend/uploads/*
+!backend/uploads/.gitkeep
+backend/*.log
+backend/venv/
+backend/venv_work/
+backend/Lib/
+backend/Scripts/
+
+# ============================================
+# Frontend specific
+# ============================================
+frontend/node_modules/
+frontend/dist/
+frontend/release/
+
+# ============================================
+# Reference repos (large, not needed)
+# ============================================
+browser-use/
+gpt-researcher/
+langgraph/
+kicad-mcp-reference/
+kicad-reference/
+
+# ============================================
+# Other
+# ============================================
+*.kicad_sch
+!backend/tools/kicad/test_*.kicad_sch

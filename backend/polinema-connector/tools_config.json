@@ -1,0 +1,95 @@
+{
+  "name": "polinema_tools",
+  "description": "Tools for accessing Polinema SIAKAD and LMS data",
+  "version": "1.0.0",
+  "base_url": "http://localhost:3001",
+  "tools": [
+    {
+      "name": "get_biodata_mahasiswa",
+      "description": "Get student biodata/profile information from SIAKAD",
+      "endpoint": "/api/biodata",
+      "method": "GET",
+      "parameters": {},
+      "returns": {
+        "type": "object",
+        "description": "Student biodata including NIM, name, program, etc."
+      }
+    },
+    {
+      "name": "get_kehadiran",
+      "description": "Get attendance/presence data for all courses",
+      "endpoint": "/api/kehadiran",
+      "method": "GET",
+      "parameters": {},
+      "returns": {
+        "type": "object",
+        "description": "Attendance records with present, absent, and permission counts per course"
+      }
+    },
+    {
+      "name": "get_kalender_akademik",
+      "description": "Get academic calendar with important dates and events",
+      "endpoint": "/api/kalender",
+      "method": "GET",
+      "parameters": {},
+      "returns": {
+        "type": "array",
+        "description": "List of academic events with dates and descriptions"
+      }
+    },
+    {
+      "name": "get_nilai_mahasiswa",
+      "description": "Get student grades/KHS (Kartu Hasil Studi)",
+      "endpoint": "/api/nilai",
+      "method": "GET",
+      "parameters": {},
+      "returns": {
+        "type": "object",
+        "description": "Grades for all courses with GPA information"
+      }
+    },
+    {
+      "name": "get_jadwal_kuliah",
+      "description": "Get class schedule for current semester",
+      "endpoint": "/api/jadwal",
+      "method": "GET",
+      "parameters": {},
+      "returns": {
+        "type": "array",
+        "description": "List of classes with time, room, and lecturer information"
+      }
+    },
+    {
+      "name": "get_all_data",
+      "description": "Get all SIAKAD data at once (biodata, kehadiran, kalender, nilai, jadwal)",
+      "endpoint": "/api/all",
+      "method": "GET",
+      "parameters": {},
+      "returns": {
+        "type": "object",
+        "description": "Complete student data from SIAKAD"
+      }
+    }
+  ],
+  "authentication": {
+    "type": "automatic",
+    "description": "Authentication is handled automatically by the server using stored credentials"
+  },
+  "usage_examples": [
+    {
+      "scenario": "User asks about attendance",
+      "tool": "get_kehadiran",
+      "response_template": "Based on your attendance data: ..."
+    },
+    {
+      "scenario": "User asks about schedule",
+      "tool": "get_jadwal_kuliah",
+      "response_template": "Your class schedule: ..."
+    },
+    {
+      "scenario": "User asks about grades/nilai",
+      "tool": "get_nilai_mahasiswa",
+      "response_template": "Your grades this semester: ..."
+    }
+  ]
+}

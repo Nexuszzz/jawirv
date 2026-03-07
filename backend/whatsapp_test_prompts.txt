@@ -1,0 +1,68 @@
+JAWIR CLI WhatsApp Integration Test - 5 Scenarios
+==================================================
+
+Scenario 1: Cek Nomor WA + Web Search Info
+Expected tools: whatsapp_check_number, web_search
+
+Prompt:
+Tolong cek apakah nomor 6287853462867 terdaftar di WhatsApp. Kalau terdaftar, cari info tentang kode area 6287853 itu dari mana.
+
+---
+
+Scenario 2: List Kontak WA + Hitung
+Expected tools: whatsapp_list_contacts
+
+Prompt:
+Tampilkan list kontak WhatsApp saya (cukup 5 kontak pertama saja), lalu hitung ada berapa total kontak.
+
+---
+
+Scenario 3: Cek Nomor WA Simple
+Expected tools: whatsapp_check_number
+
+Prompt:
+Cek nomor 6287853462867 apakah terdaftar di WhatsApp atau tidak?
+
+---
+
+Scenario 4: List Percakapan WA
+Expected tools: whatsapp_list_chats
+
+Prompt:
+Tampilkan list percakapan WhatsApp saya. Berapa jumlah total chat yang saya punya?
+
+---
+
+Scenario 5: List Grup WA
+Expected tools: whatsapp_list_groups
+
+Prompt:
+List semua grup WhatsApp yang saya ikuti. Berapa total grup yang ada?
+
+---
+
+Instructions:
+=============
+
+1. Open JAWIR CLI in a separate terminal:
+   cd D:\expo\jawirv3\jawirv2\jawirv2\backend
+   python jawir_cli.py
+
+2. Copy-paste each prompt above one by one
+
+3. Watch for these in the output:
+   🔧 ACTION - Shows which tool is being called
+   👁️ OBSERVE - Shows the tool result
+   ✅ Final response from agent
+
+4. Verify that expected tools are actually called
+
+5. Check if responses make sense and are formatted nicely
+
+Expected Results:
+================
+- Each scenario should call the expected WhatsApp tool(s)
+- Agent should understand the context and combine tools appropriately
+- Responses should be in Javanese style with emojis
+- No errors from GoWA client (device logged in check should pass)
+- Tools should execute successfully and return proper data

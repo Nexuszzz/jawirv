@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jawir OS - Browser Research Workspace</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#dab80b",
+                        "primary-hover": "#bfa10a",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#221f10",
+                        "coffee-dark": "#181711",
+                        "coffee-medium": "#2d2a1e",
+                        "coffee-light": "#393628",
+                        "cream": "#f1f0ea",
+                        "cream-muted": "#bab59c",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>::-webkit-scrollbar {
+            width: 8px;
+            height: 8px
+        }
+        ::-webkit-scrollbar-track {
+            background: #181711
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #393628;
+            border-radius: 4px
+        }.batik-trim {
+            background-color: #dab80b;
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuASLlPyJf_OkIRQ5Mnkucw-ITiq-CrAc7F8RLXyngY-cPhvY5mvAvWLq2LU7VpbDt3nSkrNSjFlneCHK6BQbpzxIRwaoJWnTygZJC9sOkUYWawlAuBqzzxVAcg9ofJsTjKMrIhA2RkBVxcN7--c-kfFbvZ4__tNw5RZke3sPlwthJurTVhrtpwEJI_K2JT5E0ofgGmKc2_uN9_fHuyBVcFRSjMbnGWFe23OBCqqcf5feyR85IcgmYFXOFYGZ1ghOQCQibodALH0efWQ)
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-white font-display overflow-hidden h-screen flex flex-col">
+<header class="flex-none z-50 bg-coffee-dark border-b border-coffee-light relative">
+<div class="absolute top-0 left-0 w-full h-1.5 batik-trim"></div>
+<div class="px-6 py-3 flex items-center justify-between mt-1.5">
+<div class="flex items-center gap-4">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-4xl">spa</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-white">Jawir OS</h1>
+</div>
+<div class="hidden md:flex items-center justify-center">
+<div class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-coffee-light border border-coffee-medium shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">graphic_eq</span>
+<span class="text-xs font-semibold text-primary uppercase tracking-wider">Standby - Siap Perintah</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex gap-1">
+<button class="p-2 rounded-lg text-cream-muted hover:text-white hover:bg-coffee-light transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="p-2 rounded-lg text-cream-muted hover:text-white hover:bg-coffee-light transition-colors">
+<span class="material-symbols-outlined">history_edu</span>
+</button>
+</div>
+<div class="h-6 w-px bg-coffee-light mx-2"></div>
+<div class="size-9 rounded-full bg-cover bg-center border border-coffee-light" data-alt="User profile picture showing a minimalist avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnsHrsccBN9SckTBcb0FzP0SvKB4uBwghssMaUQT4vyjmG07Aw4jD0Exl9GRJ5Ov2Oyp9n5zyM1q-hGnZqjs-LHlO_Gx_l0kes1z9DxlezeMItPW-Im6XVEiaI43QO399_dkRoRxoWqRjufe1hza-tmdEyJIgnPZiaPLNUW081UH6nHY9hvDv3_6fp9L3TUG8LYBjCducZs511VfeEAUwL12EpuSSxPM6DmBU_2PaGdfOtuFsssW0TP-J3xRUhMZz10W5hNak6y2YR");'></div>
+</div>
+</div>
+</header>
+<div class="flex-1 flex overflow-hidden">
+<aside class="w-full md:w-[420px] lg:w-[480px] flex flex-col border-r border-coffee-light bg-[#1c1912] relative z-20 shadow-xl">
+<div class="flex-1 overflow-y-auto p-4 space-y-6">
+<div class="flex items-center gap-4 py-2 opacity-60">
+<div class="h-px bg-coffee-light flex-1"></div>
+<span class="text-xs font-medium text-cream-muted uppercase tracking-widest">Hari Ini</span>
+<div class="h-px bg-coffee-light flex-1"></div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<div class="flex items-end gap-3 max-w-[90%]">
+<div class="bg-coffee-light text-cream rounded-2xl rounded-br-none px-5 py-3 shadow-sm border border-[#4a4638]">
+<p class="text-sm font-normal leading-relaxed">Mas, tolong carikan referensi regulator tegangan step-down 12V ke 5V yang efisien untuk project IoT.</p>
+</div>
+<div class="size-8 shrink-0 rounded-full bg-cover bg-center" data-alt="User avatar small" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC7-9-zE4yLatm9BdySlBJZPIeRsxR6t2c1q3EDQVwVThJZ3AIaR0c7UkSntNXkViuYkP3rbnOqZVaM9E5cUmAdQOaMny8e9VwGv4zEO-9A404geLKfJlWbuZlV7pCNscy2Pri7dUU3rO5cIm3mV6OSxuONhF19egDgrfoDpV8uw0H0lThWTRLikbUWOejb8K_Bnic-C5f7MdMIaC872mieovCkkxVEnAHS8PQz16Tl33oKbIq46ti4H9Qg34VmfSZqEvmstgyAaYf9");'></div>
+</div>
+<span class="text-[10px] text-cream-muted mr-12">09:14 AM</span>
+</div>
+<div class="flex flex-col items-start gap-1">
+<div class="flex items-end gap-3 max-w-[90%]">
+<div class="size-8 shrink-0 flex items-center justify-center rounded-full bg-primary text-background-dark">
+<span class="material-symbols-outlined text-[18px]">smart_toy</span>
+</div>
+<div class="bg-cream text-background-dark rounded-2xl rounded-bl-none px-5 py-3 shadow-md">
+<p class="text-sm font-medium leading-relaxed">Siap, Mas. Sampun kulo rangkumkan data saking <span class="font-bold">datasheet</span> lan forum elektronik. Niki perbandingan antara LM2596 dan XL4015. Monggo dicek.</p>
+</div>
+</div>
+<span class="text-[10px] text-cream-muted ml-12">09:15 AM</span>
+</div>
+</div>
+<div class="p-4 bg-coffee-dark border-t border-coffee-light">
+<div class="flex items-center gap-3">
+<div class="relative flex-1">
+<input class="w-full bg-coffee-medium text-white placeholder-cream-muted rounded-xl border-none py-3.5 pl-4 pr-12 focus:ring-2 focus:ring-primary focus:outline-none transition-all shadow-inner text-sm" placeholder="Ketik perintah di sini..." type="text"/>
+<button class="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 text-cream-muted hover:text-primary transition-colors">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+<button class="size-12 rounded-xl bg-gradient-to-br from-primary to-[#bfa10a] text-background-dark flex items-center justify-center shadow-lg shadow-primary/20 hover:scale-105 active:scale-95 transition-all group">
+<span class="material-symbols-outlined text-2xl group-active:animate-pulse">mic</span>
+</button>
+</div>
+<div class="text-center mt-2">
+<p class="text-[10px] text-cream-muted opacity-50">Tahan tombol mikrofon untuk bicara (Bahasa Jawa/Indonesia)</p>
+</div>
+</div>
+</aside>
+<main class="flex-1 bg-background-dark flex flex-col min-w-0 relative">
+<div class="absolute inset-0 z-0 pointer-events-none opacity-5" style="background-image: radial-gradient(#dab80b 1px, transparent 1px); background-size: 32px 32px;"></div>
+<div class="relative z-10 flex flex-col h-full p-6 lg:p-10 gap-8 overflow-y-auto">
+<div class="flex items-center gap-6 border-b border-coffee-light pb-1 overflow-x-auto no-scrollbar">
+<button class="flex items-center gap-2 pb-3 border-b-2 border-transparent text-cream-muted hover:text-white transition-colors font-medium whitespace-nowrap px-1">
+<span class="material-symbols-outlined text-[20px]">developer_board</span>
+                        KiCad PCB
+                    </button>
+<button class="flex items-center gap-2 pb-3 border-b-2 border-primary text-primary font-medium whitespace-nowrap px-1">
+<span class="material-symbols-outlined text-[20px]">language</span>
+                        Browser
+                    </button>
+<button class="flex items-center gap-2 pb-3 border-b-2 border-transparent text-cream-muted hover:text-white transition-colors font-medium whitespace-nowrap px-1">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+                        WhatsApp
+                    </button>
+<button class="flex items-center gap-2 pb-3 border-b-2 border-transparent text-cream-muted hover:text-white transition-colors font-medium whitespace-nowrap px-1">
+<span class="material-symbols-outlined text-[20px]">folder_shared</span>
+                        Google Drive
+                    </button>
+<button class="flex items-center gap-2 pb-3 border-b-2 border-transparent text-cream-muted hover:text-white transition-colors font-medium whitespace-nowrap px-1">
+<span class="material-symbols-outlined text-[20px]">sensors</span>
+                        IoT Monitor
+                    </button>
+</div>
+<div class="w-full max-w-4xl animate-fade-in-up">
+<div class="relative group rounded-2xl bg-gradient-to-br from-coffee-medium to-[#25221b] border border-[#dab80b]/30 shadow-2xl overflow-hidden hover:border-[#dab80b]/60 transition-all duration-300">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50"></div>
+<div class="p-8 flex flex-col md:flex-row gap-8 items-start">
+<div class="flex-shrink-0">
+<div class="w-32 h-32 rounded-xl bg-[#181711] border border-coffee-light flex items-center justify-center relative overflow-hidden group-hover:shadow-[0_0_20px_rgba(218,184,11,0.15)] transition-shadow">
+<div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(#dab80b 1px, transparent 1px), linear-gradient(90deg, #dab80b 1px, transparent 1px); background-size: 16px 16px;"></div>
+<span class="material-symbols-outlined text-6xl text-white relative z-10">public</span>
+<div class="absolute bottom-2 right-2 px-1.5 py-0.5 bg-blue-600 text-white text-[10px] font-bold rounded">WEB</div>
+</div>
+</div>
+<div class="flex-1 space-y-4">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-[#dab80b]/20 text-primary border border-[#dab80b]/30 uppercase tracking-wider">Research Mode</span>
+<span class="text-xs text-cream-muted">Sources: 12 Found • Updated just now</span>
+</div>
+<h2 class="text-2xl font-bold text-white tracking-tight leading-tight">Riset Web: Efisiensi Buck Converter 12V ke 5V</h2>
+<p class="text-cream-muted text-sm mt-2 leading-relaxed">
+                                        Comparison of common step-down modules. XL4015 shows better efficiency (96%) compared to LM2596 (73%) for currents above 2A.
+                                    </p>
+</div>
+<div class="bg-[#181711]/50 border border-coffee-light rounded-lg overflow-hidden">
+<table class="w-full text-left text-xs">
+<thead class="bg-coffee-light text-cream-muted font-medium">
+<tr>
+<th class="px-3 py-2">Component</th>
+<th class="px-3 py-2">Efficiency</th>
+<th class="px-3 py-2">Max Current</th>
+<th class="px-3 py-2 text-right">Freq</th>
+</tr>
+</thead>
+<tbody class="text-gray-300 divide-y divide-coffee-light/50">
+<tr>
+<td class="px-3 py-2 font-mono text-primary">LM2596</td>
+<td class="px-3 py-2">73% (Low)</td>
+<td class="px-3 py-2">3A</td>
+<td class="px-3 py-2 text-right">150kHz</td>
+</tr>
+<tr>
+<td class="px-3 py-2 font-mono text-primary">XL4015</td>
+<td class="px-3 py-2 text-green-400 font-bold">96% (High)</td>
+<td class="px-3 py-2">5A</td>
+<td class="px-3 py-2 text-right">180kHz</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="text-[10px] text-cream-muted uppercase tracking-wider self-center mr-1">Sumber:</span>
+<div class="flex items-center gap-1.5 px-2 py-1 rounded bg-coffee-light border border-coffee-light/50 text-[10px] text-gray-300">
+<img alt="" class="w-3 h-3 opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuFz75sEU6Ee177E9Rs0zrEAEzbcjSxFT32qJkQ4cefHiE-U17ZdCdAnFU9yck1-kx30uNkaROT14RetPLzwLjuYEnDjeTcT9HfuBjwy1Gegey74pp16cT0Ae8cE63N06KqK8y-laN_ON4kBJnDYD0Q-Tsaar46WlLwAnrahEFgql0OOVdEacxuKj_LA62mEzKJ-qMBnJ-MsjF-po4jyDffr4gBq9GB5JquA0stPG_ge_ukXcvIAqqfjJYhALad7n-JLOfn89U36b8"/>
+                                        ti.com
+                                    </div>
+<div class="flex items-center gap-1.5 px-2 py-1 rounded bg-coffee-light border border-coffee-light/50 text-[10px] text-gray-300">
+<img alt="" class="w-3 h-3 opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtE5WG5irt00IW5wl6S2Whnj_piGJ-mKJETv8tKsY6npGhAFMaiI3C2smTlwrBkvio_-AMKyzH4DX-VIjq33D75XqQkSWB_fol9J0HQBn7W1ywcrdo5DyYdtNOqgPZ30IjSAHjNoHG3TcygT5cQn8UIqfbsGmLIPB5l67b9i75PW8xO0kA7uMaM0Svt7cOYeEiQwaZYHLRrvvC42wXmwNPkvgcKFbqtDaQpQtLPO2euILxnGxz5JESHveE4QFlBhp7cIjXIj-q1Vzj"/>
+                                        digikey.com
+                                    </div>
+<div class="flex items-center gap-1.5 px-2 py-1 rounded bg-coffee-light border border-coffee-light/50 text-[10px] text-gray-300">
+<img alt="" class="w-3 h-3 opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUWRJMKK2nitcik3hz1N0UvmLCA7aUATOSbg0p-h89KwpfqCKjLjnrbzSH1zXtwxdlz8GbmwkEmlB6SW-qaJvDOMhEFncVp8stEdzbTvD_ViPBwubq8cz1juUjpLX0FXVe0IRRhiiDE4hs6nEImq0nJBPHKKF1myBthL9RMfwVSoDzmZ3tPZdID_wRSozusHSQScpAV_GKbMxcp-eO2MzbQgfLv8nfFJzX7GKgDvP7wpWGec3G1tqgCMI-bTWmGPnBECyToyGlwA3t"/>
+                                        allaboutcircuits.com
+                                    </div>
+</div>
+</div>
+<div class="flex flex-col gap-3 w-full md:w-auto min-w-[160px]">
+<button class="flex items-center justify-center gap-2 w-full py-3 px-6 bg-primary hover:bg-primary-hover text-background-dark font-bold rounded-xl shadow-lg shadow-primary/10 transition-transform active:scale-95">
+<span class="material-symbols-outlined">open_in_new</span>
+                                    Buka di Browser
+                                </button>
+<button class="flex items-center justify-center gap-2 w-full py-2.5 px-6 bg-coffee-light hover:bg-[#4a4638] text-white font-medium rounded-xl border border-transparent hover:border-gray-600 transition-colors text-sm">
+<span class="material-symbols-outlined text-lg">content_copy</span>
+                                    Salin Ringkasan
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+<div class="group p-5 rounded-xl bg-coffee-medium border border-coffee-light hover:border-gray-600 transition-colors flex items-center gap-4 relative overflow-hidden">
+<div class="absolute right-0 top-0 p-2 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl">grid_view</span>
+</div>
+<div class="size-12 rounded-lg bg-[#181711] flex items-center justify-center border border-coffee-light shrink-0">
+<span class="material-symbols-outlined text-orange-400">pending</span>
+</div>
+<div class="flex-1 min-w-0 z-10">
+<h3 class="text-white font-semibold truncate">ESP32 MQTT Dashboard</h3>
+<p class="text-xs text-cream-muted truncate">Pending • Waiting for broker connection...</p>
+</div>
+<button class="text-cream-muted hover:text-white p-2 rounded-lg hover:bg-[#393628]">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<div class="group p-5 rounded-xl bg-coffee-medium border border-coffee-light hover:border-gray-600 transition-colors flex items-center gap-4 relative overflow-hidden">
+<div class="absolute right-0 top-0 p-2 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl">settings_system_daydream</span>
+</div>
+<div class="size-12 rounded-lg bg-[#181711] flex items-center justify-center border border-coffee-light shrink-0">
+<span class="material-symbols-outlined text-green-500">check_circle</span>
+</div>
+<div class="flex-1 min-w-0 z-10">
+<h3 class="text-white font-semibold truncate">System Healthy</h3>
+<p class="text-xs text-cream-muted truncate">CPU: 12% • RAM: 4.2GB / 16GB</p>
+</div>
+<button class="text-cream-muted hover:text-white p-2 rounded-lg hover:bg-[#393628]">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="mt-auto pt-8 flex items-center justify-center opacity-30">
+<div class="flex items-center gap-4">
+<div class="h-px w-24 bg-gradient-to-r from-transparent to-primary"></div>
+<span class="material-symbols-outlined text-primary text-sm">spa</span>
+<div class="h-px w-24 bg-gradient-to-l from-transparent to-primary"></div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

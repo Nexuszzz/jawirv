@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jawir OS - WhatsApp Workspace</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#dab80b",
+                        "primary-hover": "#bfa10a",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#221f10",
+                        "coffee-dark": "#181711",
+                        "coffee-medium": "#2d2a1e",
+                        "coffee-light": "#393628",
+                        "cream": "#f1f0ea",
+                        "cream-muted": "#bab59c",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px
+        }
+        ::-webkit-scrollbar-track {
+            background: #181711
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #393628;
+            border-radius: 4px
+        }
+        .batik-trim {
+            background-color: #dab80b;
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuASLlPyJf_OkIRQ5Mnkucw-ITiq-CrAc7F8RLXyngY-cPhvY5mvAvWLq2LU7VpbDt3nSkrNSjFlneCHK6BQbpzxIRwaoJWnTygZJC9sOkUYWawlAuBqzzxVAcg9ofJsTjKMrIhA2RkBVxcN7--c-kfFbvZ4__tNw5RZke3sPlwthJurTVhrtpwEJI_K2JT5E0ofgGmKc2_uN9_fHuyBVcFRSjMbnGWFe23OBCqqcf5feyR85IcgmYFXOFYGZ1ghOQCQibodALH0efWQ)
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-white font-display overflow-hidden h-screen flex flex-col">
+<header class="flex-none z-50 bg-coffee-dark border-b border-coffee-light relative">
+<div class="absolute top-0 left-0 w-full h-1.5 batik-trim"></div>
+<div class="px-6 py-3 flex items-center justify-between mt-1.5">
+<div class="flex items-center gap-4">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-4xl">spa</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-white">Jawir OS</h1>
+</div>
+<div class="hidden md:flex items-center justify-center">
+<div class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-coffee-light border border-coffee-medium shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">graphic_eq</span>
+<span class="text-xs font-semibold text-primary uppercase tracking-wider">Standby - Siap Perintah</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex gap-1">
+<button class="p-2 rounded-lg text-cream-muted hover:text-white hover:bg-coffee-light transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="p-2 rounded-lg text-cream-muted hover:text-white hover:bg-coffee-light transition-colors">
+<span class="material-symbols-outlined">history_edu</span>
+</button>
+</div>
+<div class="h-6 w-px bg-coffee-light mx-2"></div>
+<div class="size-9 rounded-full bg-cover bg-center border border-coffee-light" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnsHrsccBN9SckTBcb0FzP0SvKB4uBwghssMaUQT4vyjmG07Aw4jD0Exl9GRJ5Ov2Oyp9n5zyM1q-hGnZqjs-LHlO_Gx_l0kes1z9DxlezeMItPW-Im6XVEiaI43QO399_dkRoRxoWqRjufe1hza-tmdEyJIgnPZiaPLNUW081UH6nHY9hvDv3_6fp9L3TUG8LYBjCducZs511VfeEAUwL12EpuSSxPM6DmBU_2PaGdfOtuFsssW0TP-J3xRUhMZz10W5hNak6y2YR");'></div>
+</div>
+</div>
+</header>
+<div class="flex-1 flex overflow-hidden">
+<aside class="w-full md:w-[420px] lg:w-[480px] flex flex-col border-r border-coffee-light bg-[#1c1912] relative z-20 shadow-xl">
+<div class="flex-1 overflow-y-auto p-4 space-y-6">
+<div class="flex items-center gap-4 py-2 opacity-60">
+<div class="h-px bg-coffee-light flex-1"></div>
+<span class="text-xs font-medium text-cream-muted uppercase tracking-widest">Hari Ini</span>
+<div class="h-px bg-coffee-light flex-1"></div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<div class="flex items-end gap-3 max-w-[90%]">
+<div class="bg-coffee-light text-cream rounded-2xl rounded-br-none px-5 py-3 shadow-sm border border-[#4a4638]">
+<p class="text-sm font-normal leading-relaxed">Wir, tolong kirim pesan WA ke Budi Arsitek. Bilang kalau skematik LED Driver v2.1 sudah siap, suruh dia cek email.</p>
+</div>
+<div class="size-8 shrink-0 rounded-full bg-cover bg-center" data-alt="User avatar small" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC7-9-zE4yLatm9BdySlBJZPIeRsxR6t2c1q3EDQVwVThJZ3AIaR0c7UkSntNXkViuYkP3rbnOqZVaM9E5cUmAdQOaMny8e9VwGv4zEO-9A404geLKfJlWbuZlV7pCNscy2Pri7dUU3rO5cIm3mV6OSxuONhF19egDgrfoDpV8uw0H0lThWTRLikbUWOejb8K_Bnic-C5f7MdMIaC872mieovCkkxVEnAHS8PQz16Tl33oKbIq46ti4H9Qg34VmfSZqEvmstgyAaYf9");'></div>
+</div>
+<span class="text-[10px] text-cream-muted mr-12">09:14 AM</span>
+</div>
+<div class="flex flex-col items-start gap-1">
+<div class="flex items-end gap-3 max-w-[90%]">
+<div class="size-8 shrink-0 flex items-center justify-center rounded-full bg-primary text-background-dark">
+<span class="material-symbols-outlined text-[18px]">smart_toy</span>
+</div>
+<div class="bg-cream text-background-dark rounded-2xl rounded-bl-none px-5 py-3 shadow-md">
+<p class="text-sm font-medium leading-relaxed">Nggih, Mas. Pesan untuk <span class="font-bold">Budi Arsitek</span> sudah saya draft. Monggo dicek dan dikonfirmasi di panel WhatsApp sebelah kanan.</p>
+</div>
+</div>
+<span class="text-[10px] text-cream-muted ml-12">09:15 AM</span>
+</div>
+</div>
+<div class="p-4 bg-coffee-dark border-t border-coffee-light">
+<div class="flex items-center gap-3">
+<div class="relative flex-1">
+<input class="w-full bg-coffee-medium text-white placeholder-cream-muted rounded-xl border-none py-3.5 pl-4 pr-12 focus:ring-2 focus:ring-primary focus:outline-none transition-all shadow-inner text-sm" placeholder="Ketik perintah di sini..." type="text"/>
+<button class="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 text-cream-muted hover:text-primary transition-colors">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+<button class="size-12 rounded-xl bg-gradient-to-br from-primary to-[#bfa10a] text-background-dark flex items-center justify-center shadow-lg shadow-primary/20 hover:scale-105 active:scale-95 transition-all group">
+<span class="material-symbols-outlined text-2xl group-active:animate-pulse">mic</span>
+</button>
+</div>
+<div class="text-center mt-2">
+<p class="text-[10px] text-cream-muted opacity-50">Tahan tombol mikrofon untuk bicara (Bahasa Jawa/Indonesia)</p>
+</div>
+</div>
+</aside>
+<main class="flex-1 bg-background-dark flex flex-col min-w-0 relative">
+<div class="absolute inset-0 z-0 pointer-events-none opacity-5" style="background-image: radial-gradient(#dab80b 1px, transparent 1px); background-size: 32px 32px;"></div>
+<div class="relative z-10 flex flex-col h-full p-6 lg:p-10 gap-8 overflow-y-auto">
+<div class="flex items-center gap-6 border-b border-coffee-light pb-1 overflow-x-auto no-scrollbar">
+<button class="flex items-center gap-2 pb-3 border-b-2 border-transparent text-cream-muted hover:text-white transition-colors font-medium whitespace-nowrap px-1">
+<span class="material-symbols-outlined text-[20px]">developer_board</span>
+                        KiCad PCB
+                    </button>
+<button class="flex items-center gap-2 pb-3 border-b-2 border-transparent text-cream-muted hover:text-white transition-colors font-medium whitespace-nowrap px-1">
+<span class="material-symbols-outlined text-[20px]">language</span>
+                        Browser
+                    </button>
+<button class="flex items-center gap-2 pb-3 border-b-2 border-primary text-primary font-medium whitespace-nowrap px-1">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+                        WhatsApp
+                    </button>
+<button class="flex items-center gap-2 pb-3 border-b-2 border-transparent text-cream-muted hover:text-white transition-colors font-medium whitespace-nowrap px-1">
+<span class="material-symbols-outlined text-[20px]">folder_shared</span>
+                        Google Drive
+                    </button>
+<button class="flex items-center gap-2 pb-3 border-b-2 border-transparent text-cream-muted hover:text-white transition-colors font-medium whitespace-nowrap px-1">
+<span class="material-symbols-outlined text-[20px]">sensors</span>
+                        IoT Monitor
+                    </button>
+</div>
+<div class="w-full max-w-4xl animate-fade-in-up">
+<div class="mb-4 flex items-center justify-between">
+<h2 class="text-lg font-bold text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">warning</span>
+                            Needs Confirmation
+                         </h2>
+<span class="text-xs text-cream-muted bg-coffee-medium px-2 py-1 rounded border border-coffee-light">Draft created 1 min ago</span>
+</div>
+<div class="relative group rounded-2xl bg-gradient-to-br from-coffee-medium to-[#25221b] border border-[#dab80b]/30 shadow-2xl overflow-hidden hover:border-[#dab80b]/60 transition-all duration-300">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50"></div>
+<div class="p-8 flex flex-col gap-6">
+<div class="flex items-center justify-between border-b border-coffee-light pb-4">
+<div class="flex items-center gap-4">
+<div class="size-14 rounded-full bg-cover bg-center border-2 border-[#25D366]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA0tLFQkasPQ9hNAZz1ZFGZkpuMQV8VRrmaMdX6_Z9YaZV4OIo3xVs8VbQ6KEdPvOx4wI_11PuaE3N3K8A_p1IuIM7JD2PSbsZ0VDUBz-pNbhLePrki8fQaLsL6oK8TtqSr3YHRc25uY9lZ5MPMp9OvvdL7QJ646qZrU_0QfuuecPqkumHakw69Nz6j6LytMsZ7QjtDcn0z_rwLCeJBA17W_HzaCVYwJn8t1J6NYYTS1qq2Oappkjf47R0b2-QKIv_w8UP8YTq2adfW");'></div>
+<div>
+<h3 class="text-xl font-bold text-white">Budi Arsitek</h3>
+<p class="text-sm text-[#25D366] font-medium flex items-center gap-1">
+<span class="size-2 rounded-full bg-[#25D366] inline-block animate-pulse"></span>
+                                            Online via WhatsApp
+                                        </p>
+</div>
+</div>
+<div class="bg-[#181711] px-4 py-2 rounded-lg border border-coffee-light">
+<span class="text-xs text-cream-muted uppercase tracking-widest font-bold">Priority: High</span>
+</div>
+</div>
+<div class="bg-[#1c2e23] border border-[#25D366]/30 rounded-xl p-5 relative">
+<div class="absolute -top-3 left-8 size-4 bg-[#1c2e23] border-t border-l border-[#25D366]/30 transform rotate-45"></div>
+<p class="text-white text-lg leading-relaxed font-light">"Halo Mas, skematik LED Driver v2.1 sudah siap. Silakan cek email jenengan nggih."</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 pt-2">
+<button class="flex-1 flex items-center justify-center gap-2 py-3 px-6 bg-primary hover:bg-primary-hover text-background-dark font-bold rounded-xl shadow-lg shadow-primary/10 transition-transform active:scale-95">
+<span class="material-symbols-outlined">send</span>
+                                    Konfirmasi &amp; Kirim
+                                </button>
+<button class="flex-1 flex items-center justify-center gap-2 py-3 px-6 bg-coffee-light hover:bg-[#4a4638] text-white font-medium rounded-xl border border-transparent hover:border-gray-600 transition-colors">
+<span class="material-symbols-outlined">edit</span>
+                                    Edit Pesan
+                                </button>
+<button class="sm:w-auto w-full flex items-center justify-center py-3 px-4 text-red-400 hover:text-red-300 hover:bg-red-400/10 rounded-xl transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-4xl space-y-4">
+<h3 class="text-sm font-semibold text-cream-muted uppercase tracking-wider pl-1">Recent Messages</h3>
+<div class="group p-4 rounded-xl bg-coffee-medium/50 border border-coffee-light hover:bg-coffee-medium transition-colors flex items-center gap-4">
+<div class="size-10 rounded-full bg-cover bg-center opacity-70" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAuJtupavT_SLCcQrnJc4gJD0BPvRhVeKN1lCD0QywPASuRbzKkqdeOO450RjP7qq5XGa_zsKRUc4EZdqHQ_iKIYwhRSsyA2vw2ElIw_CYSg81GRccK8rSQFIcgg__f82xtsXZovGk1K_0RZTXcnf7MjmTFea5JqKVIrfqLyJb7UumVYglxhArxx-GFNjraI4U9bLuTaVWccQ0d-9hTCDOHQ9mFkdXXhfJng_uV1WrG8Db21cCevBmyQhuepuVZkCsyGbmB4NqSNzwp");'></div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-0.5">
+<h4 class="text-white font-medium truncate">Pak RT - Mas Joko</h4>
+<span class="text-xs text-cream-muted">Yesterday</span>
+</div>
+<p class="text-xs text-cream-muted truncate opacity-80">Nggih pak, nanti malam saya hadir rapat warga.</p>
+</div>
+<div class="text-[#25D366]">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+</div>
+</div>
+<div class="group p-4 rounded-xl bg-coffee-medium/50 border border-coffee-light hover:bg-coffee-medium transition-colors flex items-center gap-4">
+<div class="size-10 rounded-full bg-cover bg-center opacity-70" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCEYrmAzK3mrZaA0IS1nixwvqrfNp1NlHw8UtQIhZTfa4--Zo1DcmWK-Jp4tS_heFbACbMho5HWOpJtr8fAXdEs6UxiBsfRAAJlDFnWyosb1AwuUSpWR-x8JRVcOPe1Vf198AX7jtHpINo2t-glnHQbfdfQ7dclnJ2b39_WQI1pFXRFb_iOXZVisauDtoe8l9Z49HGb-ntBA3S04dvCOyuDLDp6huhoMmXuphUADRymFFHhyx0t5X6jump2igQ7AzozGefCg2Yv8js_");'></div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-0.5">
+<h4 class="text-white font-medium truncate">Toko Elektronik Jaya</h4>
+<span class="text-xs text-cream-muted">Yesterday</span>
+</div>
+<p class="text-xs text-cream-muted truncate opacity-80">Stok ESP32 sudah ready belum ya mbak?</p>
+</div>
+<div class="text-[#25D366]">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+</div>
+</div>
+</div>
+<div class="mt-auto pt-8 flex items-center justify-center opacity-30">
+<div class="flex items-center gap-4">
+<div class="h-px w-24 bg-gradient-to-r from-transparent to-primary"></div>
+<span class="material-symbols-outlined text-primary text-sm">spa</span>
+<div class="h-px w-24 bg-gradient-to-l from-transparent to-primary"></div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

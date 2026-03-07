@@ -1,0 +1,1862 @@
+{
+  "menus": [
+    {
+      "text": "244101060077 / MUHAMMAD F.Z",
+      "href": "https://siakad.polinema.ac.id/beranda#",
+      "class": "dropdown-toggle"
+    },
+    {
+      "text": "Change Password",
+      "href": "https://siakad.polinema.ac.id/beranda#",
+      "class": "",
+      "onclick": "function onclick(event) {\nchangePasswordClick()\n}"
+    },
+    {
+      "text": "Log Out",
+      "href": "https://siakad.polinema.ac.id/login/logout",
+      "class": ""
+    },
+    {
+      "text": "Beranda",
+      "href": "https://siakad.polinema.ac.id/beranda",
+      "class": ""
+    },
+    {
+      "text": "Message",
+      "href": "https://siakad.polinema.ac.id/show_message/index",
+      "class": "ajaxify"
+    },
+    {
+      "text": "Ganti Password",
+      "href": "https://siakad.polinema.ac.id/change_password/index",
+      "class": "hide ajaxify"
+    },
+    {
+      "text": "General",
+      "href": "javascript:;",
+      "class": ""
+    },
+    {
+      "text": "Biodata Mahasiswa",
+      "href": "https://siakad.polinema.ac.id/mahasiswa/biodata/index/gm/general",
+      "class": "ajaxify"
+    },
+    {
+      "text": "Verifikasi Data Mahasiswa",
+      "href": "https://siakad.polinema.ac.id/mahasiswa/tr_validasi_mhs/index/gm/general",
+      "class": "ajaxify"
+    },
+    {
+      "text": "Update NISN dan Vaksin",
+      "href": "https://siakad.polinema.ac.id/mahasiswa/nisnvaksin/index/gm/general",
+      "class": "ajaxify"
+    },
+    {
+      "text": "Foto KTM",
+      "href": "https://siakad.polinema.ac.id/mahasiswa/ktm/index/gm/general",
+      "class": "ajaxify"
+    },
+    {
+      "text": "KTM Virtual",
+      "href": "https://siakad.polinema.ac.id/mahasiswa/ktm_virtual/index/gm/general",
+      "class": "ajaxify"
+    },
+    {
+      "text": "Permintaan KTM",
+      "href": "https://siakad.polinema.ac.id/mahasiswa/tr_permintaan_ktm/index/gm/general",
+      "class": "ajaxify"
+    },
+    {
+      "text": "Riwayat Status dan Kelas",
+      "href": "https://siakad.polinema.ac.id/mahasiswa/riwayat_status/index/gm/general",
+      "class": "ajaxify"
+    },
+    {
+      "text": "BPJS Kesehatan",
+      "href": "https://siakad.polinema.ac.id/mahasiswa/tr_verifikasi_bpjs/index/gm/general",
+      "class": "ajaxify"
+    },
+    {
+      "text": "Akademik",
+      "href": "javascript:;",
+      "class": ""
+    },
+    {
+      "text": "Kalender Akademik",
+      "href": "https://siakad.polinema.ac.id/mahasiswa/kalenderakd/index/gm/akademik",
+      "class": "ajaxify"
+    },
+    {
+      "text": "Kartu Rencana Studi (KRS)",
+      "href": "https://siakad.polinema.ac.id/mahasiswa/krs/index/gm/akademik",
+      "class": "ajaxify"
+    },
+    {
+      "text": "LinkAja - Paket Data 50GB",
+      "href": "https://siakad.polinema.ac.id/mahasiswa/linkaja/index/gm/akademik",
+      "class": "ajaxify"
+    },
+    {
+      "text": "Jadwal Perkuliahan",
+      "href": "https://siakad.polinema.ac.id/mahasiswa/jadwal/index/gm/akademik",
+      "class": "ajaxify"
+    },
+    {
+      "text": "Nilai Mahasiswa",
+      "href": "https://siakad.polinema.ac.id/mahasiswa/akademik/index/gm/akademik",
+      "class": "ajaxify"
+    },
+    {
+      "text": "LMS",
+      "href": "https://siakad.polinema.ac.id/mahasiswa/slc/index/gm/akademik",
+      "class": "ajaxify"
+    },
+    {
+      "text": "Data SKPI",
+      "href": "https://siakad.polinema.ac.id/mahasiswa/skpi/index/gm/akademik",
+      "class": "ajaxify"
+    },
+    {
+      "text": "Presensi",
+      "href": "https://siakad.polinema.ac.id/mahasiswa/presensi/index/gm/akademik",
+      "class": "ajaxify"
+    },
+    {
+      "text": "Kompetisi Mahasiswa",
+      "href": "https://siakad.polinema.ac.id/mahasiswa/kompetisi/index/gm/akademik",
+      "class": "ajaxify"
+    },
+    {
+      "text": "Prestasi Mahasiswa",
+      "href": "https://siakad.polinema.ac.id/mahasiswa/prestasi/index/gm/akademik",
+      "class": "ajaxify"
+    },
+    {
+      "text": "UKT",
+      "href": "javascript:;",
+      "class": ""
+    },
+    {
+      "text": "Pembayaran UKT",
+      "href": "https://siakad.polinema.ac.id/mahasiswa/pembayaran/index/gm/ukt",
+      "class": "ajaxify"
+    },
+    {
+      "text": "Keringanan UKT",
+      "href": "https://siakad.polinema.ac.id/mahasiswa/tr_keringanan_ukt/index/gm/ukt",
+      "class": "ajaxify"
+    },
+    {
+      "text": "Bantuan UKT Covid-19",
+      "href": "https://siakad.polinema.ac.id/mahasiswa/bantuan_covid/index/gm/ukt",
+      "class": "ajaxify"
+    },
+    {
+      "text": "Surat & Kuesioner",
+      "href": "javascript:;",
+      "class": ""
+    },
+    {
+      "text": "Permintaan Surat",
+      "href": "https://siakad.polinema.ac.id/mahasiswa/persuratan/index/gm/surat-sp-%26-sp-kuesioner",
+      "class": "ajaxify"
+    },
+    {
+      "text": "Riwayat Permintaan Surat",
+      "href": "https://siakad.polinema.ac.id/mahasiswa/riwayat_surat/index/gm/surat-sp-%26-sp-kuesioner",
+      "class": "ajaxify"
+    },
+    {
+      "text": "Kuesioner",
+      "href": "https://siakad.polinema.ac.id/mahasiswa/kuesioner/index/gm/surat-sp-%26-sp-kuesioner",
+      "class": "ajaxify"
+    },
+    {
+      "text": "Kuesioner Akademik",
+      "href": "https://siakad.polinema.ac.id/mahasiswa/tr_kuesakd/index/gm/surat-sp-%26-sp-kuesioner",
+      "class": "ajaxify"
+    },
+    {
+      "text": "Tingkat akhir",
+      "href": "javascript:;",
+      "class": ""
+    },
+    {
+      "text": "PKL",
+      "href": "https://siakad.polinema.ac.id/mahasiswa/pkl/index/gm/tingkat-sp-akhir",
+      "class": "ajaxify"
+    },
+    {
+      "text": "Tugas Akhir / Skripsi",
+      "href": "https://siakad.polinema.ac.id/mahasiswa/tugas_akhir/index/gm/tingkat-sp-akhir",
+      "class": "ajaxify"
+    },
+    {
+      "text": "Foto Ijazah",
+      "href": "https://siakad.polinema.ac.id/mahasiswa/tr_validasi_ijazah/index/gm/tingkat-sp-akhir",
+      "class": "ajaxify"
+    },
+    {
+      "text": "Kuesioner Tingkat Akhir",
+      "href": "https://siakad.polinema.ac.id/mahasiswa/tr_kuisioner/index/gm/tingkat-sp-akhir",
+      "class": "ajaxify"
+    },
+    {
+      "text": "Siakad",
+      "href": "https://siakad.polinema.ac.id/beranda",
+      "class": ""
+    },
+    {
+      "text": "Beranda",
+      "href": "https://siakad.polinema.ac.id/beranda#",
+      "class": ""
+    },
+    {
+      "text": "Welcome",
+      "href": "https://siakad.polinema.ac.id/beranda#",
+      "class": ""
+    },
+    {
+      "text": "Filter",
+      "href": "",
+      "class": "btn green-meadow btn-circle btn-input-data-insert",
+      "onclick": "function onclick(event) {\nloadDataPresensiPerSemester()\n}"
+    },
+    {
+      "text": "GANTI PASSWORD",
+      "href": "",
+      "class": "btn btn-sm green-meadow btn-circle btn-input-data-insert"
+    },
+    {
+      "text": "×",
+      "href": "",
+      "class": "close"
+    },
+    {
+      "text": "Klik disini",
+      "href": "https://pemirapolinema.com/",
+      "class": "btn purple"
+    },
+    {
+      "text": "Close",
+      "href": "",
+      "class": "btn default"
+    },
+    {
+      "text": "Save changes",
+      "href": "",
+      "class": "btn blue"
+    },
+    {
+      "text": "Close",
+      "href": "",
+      "class": "btn"
+    },
+    {
+      "text": "Print",
+      "href": "",
+      "class": "btn blue",
+      "onclick": "function onclick(event) {\nprintWindowsFrame()\n}"
+    }
+  ],
+  "biodata": {
+    "url": "https://siakad.polinema.ac.id/mahasiswa/biodata/index/gm/general",
+    "title": "SIAKAD 3 | Sistem Informasi Akademik",
+    "tables": [
+      {
+        "index": 0,
+        "headers": [],
+        "rows": [
+          [
+            "",
+            "KEMENTERIAN RISET, TEKNOLOGI DAN PENDIDIKAN TINGGI\n\t\t\t\tPOLITEKNIK NEGERI MALANG\n\t\t\t\t\n\t\t\t\t\tJl. Soekarno Hatta No. 9 Malang 65141\n\t\t\t\t\tTelepon (0341) 404424 - 404425; Fax (0341) 404420\n\t\t\t\t\thttp://www.polinema.ac.id",
+            ""
+          ]
+        ]
+      }
+    ],
+    "cards": [
+      {
+        "index": 0,
+        "class": "alert alert-info main-alert-error hide",
+        "content": "Terdapat beberapa kesalahan input. Mohon periksa ulang data berikut"
+      }
+    ],
+    "lists": [
+      {
+        "index": 0,
+        "items": [
+          "",
+          "244101060077 / MUHAMMAD F.Z",
+          "Change Password",
+          "Log Out"
+        ]
+      },
+      {
+        "index": 2,
+        "items": [
+          "Change Password",
+          "Log Out"
+        ]
+      },
+      {
+        "index": 3,
+        "items": [
+          "",
+          "Beranda",
+          "Message",
+          "Ganti Password",
+          "General\nBiodata Mahasiswa\nVerifikasi Data Mahasiswa\nUpdate NISN dan Vaksin\nFoto KTM\nKTM Virtual\nPermintaan KTM\nRiwayat Status dan Kelas\nBPJS Kesehatan",
+          "Biodata Mahasiswa",
+          "Verifikasi Data Mahasiswa",
+          "Update NISN dan Vaksin",
+          "Foto KTM",
+          "KTM Virtual",
+          "Permintaan KTM",
+          "Riwayat Status dan Kelas",
+          "BPJS Kesehatan",
+          "Akademik",
+          "Kalender Akademik",
+          "Kartu Rencana Studi (KRS)",
+          "LinkAja - Paket Data 50GB",
+          "Jadwal Perkuliahan",
+          "Nilai Mahasiswa",
+          "LMS",
+          "Data SKPI",
+          "Presensi",
+          "Kompetisi Mahasiswa",
+          "Prestasi Mahasiswa",
+          "UKT",
+          "Pembayaran UKT",
+          "Keringanan UKT",
+          "Bantuan UKT Covid-19",
+          "Surat & Kuesioner",
+          "Permintaan Surat",
+          "Riwayat Permintaan Surat",
+          "Kuesioner",
+          "Kuesioner Akademik",
+          "Tingkat akhir",
+          "PKL",
+          "Tugas Akhir / Skripsi",
+          "Foto Ijazah",
+          "Kuesioner Tingkat Akhir"
+        ]
+      },
+      {
+        "index": 4,
+        "items": [
+          "Biodata Mahasiswa",
+          "Verifikasi Data Mahasiswa",
+          "Update NISN dan Vaksin",
+          "Foto KTM",
+          "KTM Virtual",
+          "Permintaan KTM",
+          "Riwayat Status dan Kelas",
+          "BPJS Kesehatan"
+        ]
+      },
+      {
+        "index": 5,
+        "items": [
+          "Kalender Akademik",
+          "Kartu Rencana Studi (KRS)",
+          "LinkAja - Paket Data 50GB",
+          "Jadwal Perkuliahan",
+          "Nilai Mahasiswa",
+          "LMS",
+          "Data SKPI",
+          "Presensi",
+          "Kompetisi Mahasiswa",
+          "Prestasi Mahasiswa"
+        ]
+      },
+      {
+        "index": 6,
+        "items": [
+          "Pembayaran UKT",
+          "Keringanan UKT",
+          "Bantuan UKT Covid-19"
+        ]
+      },
+      {
+        "index": 7,
+        "items": [
+          "Permintaan Surat",
+          "Riwayat Permintaan Surat",
+          "Kuesioner",
+          "Kuesioner Akademik"
+        ]
+      },
+      {
+        "index": 8,
+        "items": [
+          "PKL",
+          "Tugas Akhir / Skripsi",
+          "Foto Ijazah",
+          "Kuesioner Tingkat Akhir"
+        ]
+      },
+      {
+        "index": 9,
+        "items": [
+          "Siakad",
+          "Beranda",
+          "Welcome"
+        ]
+      },
+      {
+        "index": 10,
+        "items": [
+          "Masuk ke menu General",
+          "Pilih submenu Verifikasi Data Mahasiswa",
+          "Pastikan KTP Anda, KTP Ayah, KTP Ibu, Akta Kelahiran, Kartu Keluarga, dan Ijazah Terakhir sudah terupload, jika belum mohon untuk dilengkapi terlebih dahulu sebelum mengajukan perubahan data",
+          "Jik dokumen pendukung di atas telah terupload semua, klik tombol Perubahan Data (di bagian paling bawah)",
+          "Download format Surat Perubahan Data",
+          "Isikan Nama, NIM, Jurusan/Prodi dan Alamat beserta data yang akan diubah (tuliskan data awal dan data perubahannya) pada Surat Perubahan Data",
+          "Print dan Tandatangani Surat Perubahan Data",
+          "Upload Surat Perubahan Data yang sudah ditandangani ke menu General -> Verifikasi Data Mahasiswa -> Perubahan Data",
+          "Klik Simpan",
+          "Jika perubahan data telah disetujui dan diverifikasi maka akan muncul pemberitahuan bahwa data telah terverifikasi",
+          "Selesai"
+        ]
+      }
+    ]
+  },
+  "kehadiran": {
+    "2024/2025 Ganjil": {
+      "url": "https://siakad.polinema.ac.id/mahasiswa/presensi/index/gm/akademik",
+      "title": "SIAKAD 3 | Sistem Informasi Akademik",
+      "tables": [
+        {
+          "index": 0,
+          "headers": [
+            "NO",
+            "MATA KULIAH",
+            "PERTEMUAN",
+            "TANGGAL",
+            "ALPHA",
+            "IJIN",
+            "SAKIT"
+          ],
+          "rows": [
+            [
+              "1",
+              "Teknik Digital",
+              "Minggu Ke-15",
+              "2/Dec/2024",
+              "0:0",
+              "3:0",
+              "0:0"
+            ],
+            [
+              "Jumlah",
+              "0:0",
+              "3:0",
+              "0:0"
+            ],
+            [
+              "Total AIS",
+              "3:0"
+            ]
+          ]
+        },
+        {
+          "index": 1,
+          "headers": [],
+          "rows": [
+            [
+              "",
+              "KEMENTERIAN RISET, TEKNOLOGI DAN PENDIDIKAN TINGGI\n\t\t\t\tPOLITEKNIK NEGERI MALANG\n\t\t\t\t\n\t\t\t\t\tJl. Soekarno Hatta No. 9 Malang 65141\n\t\t\t\t\tTelepon (0341) 404424 - 404425; Fax (0341) 404420\n\t\t\t\t\thttp://www.polinema.ac.id",
+              ""
+            ]
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "index": 0,
+          "class": "alert alert-info main-alert-error hide",
+          "content": "Terdapat beberapa kesalahan input. Mohon periksa ulang data berikut"
+        }
+      ],
+      "lists": [
+        {
+          "index": 0,
+          "items": [
+            "",
+            "244101060077 / MUHAMMAD F.Z",
+            "Change Password",
+            "Log Out"
+          ]
+        },
+        {
+          "index": 2,
+          "items": [
+            "Change Password",
+            "Log Out"
+          ]
+        },
+        {
+          "index": 3,
+          "items": [
+            "",
+            "Beranda",
+            "Message",
+            "Ganti Password",
+            "General",
+            "Biodata Mahasiswa",
+            "Verifikasi Data Mahasiswa",
+            "Update NISN dan Vaksin",
+            "Foto KTM",
+            "KTM Virtual",
+            "Permintaan KTM",
+            "Riwayat Status dan Kelas",
+            "BPJS Kesehatan",
+            "Akademik\nKalender Akademik\nKartu Rencana Studi (KRS)\nLinkAja - Paket Data 50GB\nJadwal Perkuliahan\nNilai Mahasiswa\nLMS\nData SKPI\nPresensi\nKompetisi Mahasiswa\nPrestasi Mahasiswa",
+            "Kalender Akademik",
+            "Kartu Rencana Studi (KRS)",
+            "LinkAja - Paket Data 50GB",
+            "Jadwal Perkuliahan",
+            "Nilai Mahasiswa",
+            "LMS",
+            "Data SKPI",
+            "Presensi",
+            "Kompetisi Mahasiswa",
+            "Prestasi Mahasiswa",
+            "UKT",
+            "Pembayaran UKT",
+            "Keringanan UKT",
+            "Bantuan UKT Covid-19",
+            "Surat & Kuesioner",
+            "Permintaan Surat",
+            "Riwayat Permintaan Surat",
+            "Kuesioner",
+            "Kuesioner Akademik",
+            "Tingkat akhir",
+            "PKL",
+            "Tugas Akhir / Skripsi",
+            "Foto Ijazah",
+            "Kuesioner Tingkat Akhir"
+          ]
+        },
+        {
+          "index": 4,
+          "items": [
+            "Biodata Mahasiswa",
+            "Verifikasi Data Mahasiswa",
+            "Update NISN dan Vaksin",
+            "Foto KTM",
+            "KTM Virtual",
+            "Permintaan KTM",
+            "Riwayat Status dan Kelas",
+            "BPJS Kesehatan"
+          ]
+        },
+        {
+          "index": 5,
+          "items": [
+            "Kalender Akademik",
+            "Kartu Rencana Studi (KRS)",
+            "LinkAja - Paket Data 50GB",
+            "Jadwal Perkuliahan",
+            "Nilai Mahasiswa",
+            "LMS",
+            "Data SKPI",
+            "Presensi",
+            "Kompetisi Mahasiswa",
+            "Prestasi Mahasiswa"
+          ]
+        },
+        {
+          "index": 6,
+          "items": [
+            "Pembayaran UKT",
+            "Keringanan UKT",
+            "Bantuan UKT Covid-19"
+          ]
+        },
+        {
+          "index": 7,
+          "items": [
+            "Permintaan Surat",
+            "Riwayat Permintaan Surat",
+            "Kuesioner",
+            "Kuesioner Akademik"
+          ]
+        },
+        {
+          "index": 8,
+          "items": [
+            "PKL",
+            "Tugas Akhir / Skripsi",
+            "Foto Ijazah",
+            "Kuesioner Tingkat Akhir"
+          ]
+        },
+        {
+          "index": 9,
+          "items": [
+            "Siakad",
+            "Beranda",
+            "Welcome"
+          ]
+        }
+      ]
+    },
+    "2025/2026 Ganjil": {
+      "url": "https://siakad.polinema.ac.id/mahasiswa/presensi/index/gm/akademik",
+      "title": "SIAKAD 3 | Sistem Informasi Akademik",
+      "tables": [
+        {
+          "index": 0,
+          "headers": [
+            "NO",
+            "MATA KULIAH",
+            "PERTEMUAN",
+            "TANGGAL",
+            "ALPHA",
+            "IJIN",
+            "SAKIT"
+          ],
+          "rows": [
+            [
+              "1",
+              "Sistem Komunikasi Seluler",
+              "Minggu Ke-3",
+              "9/Sep/2025",
+              "0:0",
+              "0:0",
+              "2:30"
+            ],
+            [
+              "2",
+              "Antena",
+              "Minggu Ke-4",
+              "18/Sep/2025",
+              "0:0",
+              "0:0",
+              "3:0"
+            ],
+            [
+              "3",
+              "Workshop Rekayasa Trafik",
+              "Minggu Ke-3",
+              "9/Sep/2025",
+              "0:0",
+              "0:0",
+              "2:0"
+            ],
+            [
+              "Jumlah",
+              "0:0",
+              "0:0",
+              "7:30"
+            ],
+            [
+              "Total AIS",
+              "7:30"
+            ]
+          ]
+        },
+        {
+          "index": 1,
+          "headers": [],
+          "rows": [
+            [
+              "",
+              "KEMENTERIAN RISET, TEKNOLOGI DAN PENDIDIKAN TINGGI\n\t\t\t\tPOLITEKNIK NEGERI MALANG\n\t\t\t\t\n\t\t\t\t\tJl. Soekarno Hatta No. 9 Malang 65141\n\t\t\t\t\tTelepon (0341) 404424 - 404425; Fax (0341) 404420\n\t\t\t\t\thttp://www.polinema.ac.id",
+              ""
+            ]
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "index": 0,
+          "class": "alert alert-info main-alert-error hide",
+          "content": "Terdapat beberapa kesalahan input. Mohon periksa ulang data berikut"
+        }
+      ],
+      "lists": [
+        {
+          "index": 0,
+          "items": [
+            "",
+            "244101060077 / MUHAMMAD F.Z",
+            "Change Password",
+            "Log Out"
+          ]
+        },
+        {
+          "index": 2,
+          "items": [
+            "Change Password",
+            "Log Out"
+          ]
+        },
+        {
+          "index": 3,
+          "items": [
+            "",
+            "Beranda",
+            "Message",
+            "Ganti Password",
+            "General",
+            "Biodata Mahasiswa",
+            "Verifikasi Data Mahasiswa",
+            "Update NISN dan Vaksin",
+            "Foto KTM",
+            "KTM Virtual",
+            "Permintaan KTM",
+            "Riwayat Status dan Kelas",
+            "BPJS Kesehatan",
+            "Akademik\nKalender Akademik\nKartu Rencana Studi (KRS)\nLinkAja - Paket Data 50GB\nJadwal Perkuliahan\nNilai Mahasiswa\nLMS\nData SKPI\nPresensi\nKompetisi Mahasiswa\nPrestasi Mahasiswa",
+            "Kalender Akademik",
+            "Kartu Rencana Studi (KRS)",
+            "LinkAja - Paket Data 50GB",
+            "Jadwal Perkuliahan",
+            "Nilai Mahasiswa",
+            "LMS",
+            "Data SKPI",
+            "Presensi",
+            "Kompetisi Mahasiswa",
+            "Prestasi Mahasiswa",
+            "UKT",
+            "Pembayaran UKT",
+            "Keringanan UKT",
+            "Bantuan UKT Covid-19",
+            "Surat & Kuesioner",
+            "Permintaan Surat",
+            "Riwayat Permintaan Surat",
+            "Kuesioner",
+            "Kuesioner Akademik",
+            "Tingkat akhir",
+            "PKL",
+            "Tugas Akhir / Skripsi",
+            "Foto Ijazah",
+            "Kuesioner Tingkat Akhir"
+          ]
+        },
+        {
+          "index": 4,
+          "items": [
+            "Biodata Mahasiswa",
+            "Verifikasi Data Mahasiswa",
+            "Update NISN dan Vaksin",
+            "Foto KTM",
+            "KTM Virtual",
+            "Permintaan KTM",
+            "Riwayat Status dan Kelas",
+            "BPJS Kesehatan"
+          ]
+        },
+        {
+          "index": 5,
+          "items": [
+            "Kalender Akademik",
+            "Kartu Rencana Studi (KRS)",
+            "LinkAja - Paket Data 50GB",
+            "Jadwal Perkuliahan",
+            "Nilai Mahasiswa",
+            "LMS",
+            "Data SKPI",
+            "Presensi",
+            "Kompetisi Mahasiswa",
+            "Prestasi Mahasiswa"
+          ]
+        },
+        {
+          "index": 6,
+          "items": [
+            "Pembayaran UKT",
+            "Keringanan UKT",
+            "Bantuan UKT Covid-19"
+          ]
+        },
+        {
+          "index": 7,
+          "items": [
+            "Permintaan Surat",
+            "Riwayat Permintaan Surat",
+            "Kuesioner",
+            "Kuesioner Akademik"
+          ]
+        },
+        {
+          "index": 8,
+          "items": [
+            "PKL",
+            "Tugas Akhir / Skripsi",
+            "Foto Ijazah",
+            "Kuesioner Tingkat Akhir"
+          ]
+        },
+        {
+          "index": 9,
+          "items": [
+            "Siakad",
+            "Beranda",
+            "Welcome"
+          ]
+        }
+      ]
+    },
+    "2025/2026 Genap": {
+      "url": "https://siakad.polinema.ac.id/mahasiswa/presensi/index/gm/akademik",
+      "title": "SIAKAD 3 | Sistem Informasi Akademik",
+      "tables": [
+        {
+          "index": 0,
+          "headers": [
+            "NO",
+            "MATA KULIAH",
+            "PERTEMUAN",
+            "TANGGAL",
+            "ALPHA",
+            "IJIN",
+            "SAKIT"
+          ],
+          "rows": [
+            [
+              "Jumlah",
+              "0:0",
+              "0:0",
+              "0:0"
+            ],
+            [
+              "Total AIS",
+              "0:0"
+            ]
+          ]
+        },
+        {
+          "index": 1,
+          "headers": [],
+          "rows": [
+            [
+              "",
+              "KEMENTERIAN RISET, TEKNOLOGI DAN PENDIDIKAN TINGGI\n\t\t\t\tPOLITEKNIK NEGERI MALANG\n\t\t\t\t\n\t\t\t\t\tJl. Soekarno Hatta No. 9 Malang 65141\n\t\t\t\t\tTelepon (0341) 404424 - 404425; Fax (0341) 404420\n\t\t\t\t\thttp://www.polinema.ac.id",
+              ""
+            ]
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "index": 0,
+          "class": "alert alert-info main-alert-error hide",
+          "content": "Terdapat beberapa kesalahan input. Mohon periksa ulang data berikut"
+        }
+      ],
+      "lists": [
+        {
+          "index": 0,
+          "items": [
+            "",
+            "244101060077 / MUHAMMAD F.Z",
+            "Change Password",
+            "Log Out"
+          ]
+        },
+        {
+          "index": 2,
+          "items": [
+            "Change Password",
+            "Log Out"
+          ]
+        },
+        {
+          "index": 3,
+          "items": [
+            "",
+            "Beranda",
+            "Message",
+            "Ganti Password",
+            "General",
+            "Biodata Mahasiswa",
+            "Verifikasi Data Mahasiswa",
+            "Update NISN dan Vaksin",
+            "Foto KTM",
+            "KTM Virtual",
+            "Permintaan KTM",
+            "Riwayat Status dan Kelas",
+            "BPJS Kesehatan",
+            "Akademik\nKalender Akademik\nKartu Rencana Studi (KRS)\nLinkAja - Paket Data 50GB\nJadwal Perkuliahan\nNilai Mahasiswa\nLMS\nData SKPI\nPresensi\nKompetisi Mahasiswa\nPrestasi Mahasiswa",
+            "Kalender Akademik",
+            "Kartu Rencana Studi (KRS)",
+            "LinkAja - Paket Data 50GB",
+            "Jadwal Perkuliahan",
+            "Nilai Mahasiswa",
+            "LMS",
+            "Data SKPI",
+            "Presensi",
+            "Kompetisi Mahasiswa",
+            "Prestasi Mahasiswa",
+            "UKT",
+            "Pembayaran UKT",
+            "Keringanan UKT",
+            "Bantuan UKT Covid-19",
+            "Surat & Kuesioner",
+            "Permintaan Surat",
+            "Riwayat Permintaan Surat",
+            "Kuesioner",
+            "Kuesioner Akademik",
+            "Tingkat akhir",
+            "PKL",
+            "Tugas Akhir / Skripsi",
+            "Foto Ijazah",
+            "Kuesioner Tingkat Akhir"
+          ]
+        },
+        {
+          "index": 4,
+          "items": [
+            "Biodata Mahasiswa",
+            "Verifikasi Data Mahasiswa",
+            "Update NISN dan Vaksin",
+            "Foto KTM",
+            "KTM Virtual",
+            "Permintaan KTM",
+            "Riwayat Status dan Kelas",
+            "BPJS Kesehatan"
+          ]
+        },
+        {
+          "index": 5,
+          "items": [
+            "Kalender Akademik",
+            "Kartu Rencana Studi (KRS)",
+            "LinkAja - Paket Data 50GB",
+            "Jadwal Perkuliahan",
+            "Nilai Mahasiswa",
+            "LMS",
+            "Data SKPI",
+            "Presensi",
+            "Kompetisi Mahasiswa",
+            "Prestasi Mahasiswa"
+          ]
+        },
+        {
+          "index": 6,
+          "items": [
+            "Pembayaran UKT",
+            "Keringanan UKT",
+            "Bantuan UKT Covid-19"
+          ]
+        },
+        {
+          "index": 7,
+          "items": [
+            "Permintaan Surat",
+            "Riwayat Permintaan Surat",
+            "Kuesioner",
+            "Kuesioner Akademik"
+          ]
+        },
+        {
+          "index": 8,
+          "items": [
+            "PKL",
+            "Tugas Akhir / Skripsi",
+            "Foto Ijazah",
+            "Kuesioner Tingkat Akhir"
+          ]
+        },
+        {
+          "index": 9,
+          "items": [
+            "Siakad",
+            "Beranda",
+            "Welcome"
+          ]
+        }
+      ]
+    }
+  },
+  "kalender": {
+    "skipped": true,
+    "reason": "Calendar endpoint returns 404"
+  },
+  "nilai": {
+    "url": "https://siakad.polinema.ac.id/mahasiswa/akademik/index/gm/akademik",
+    "title": "SIAKAD 3 | Sistem Informasi Akademik",
+    "tables": [
+      {
+        "index": 0,
+        "headers": [
+          "NO",
+          "KODE MK",
+          "NAMA MATA KULIAH",
+          "SKS",
+          "JAM",
+          "NILAI"
+        ],
+        "rows": [
+          [
+            "1",
+            "RTD241002",
+            "Pendidikan Kewarganegaraan",
+            "2",
+            "2",
+            "B+"
+          ],
+          [
+            "2",
+            "RTD241108",
+            "Dasar Sistem Telekomunikasi",
+            "2",
+            "4",
+            "B"
+          ],
+          [
+            "3",
+            "RTD241003",
+            "QMS",
+            "2",
+            "2",
+            "B"
+          ],
+          [
+            "4",
+            "RTD241109",
+            "Workshop Alat Ukur dan Pengukuran",
+            "2",
+            "5",
+            "B"
+          ],
+          [
+            "5",
+            "RTD241104",
+            "Matematika Teknik I",
+            "2",
+            "3",
+            "A"
+          ],
+          [
+            "6",
+            "RTD241110",
+            "Bengkel Elektromekanik",
+            "2",
+            "6",
+            "B+"
+          ],
+          [
+            "7",
+            "RTD241001",
+            "Bahasa Inggris I: Basic English",
+            "2",
+            "2",
+            "A"
+          ],
+          [
+            "8",
+            "RTD241105",
+            "Dasar Teknik Elektronika",
+            "2",
+            "3",
+            "B"
+          ],
+          [
+            "9",
+            "RTD241107",
+            "Teknik Digital",
+            "2",
+            "4",
+            "A"
+          ],
+          [
+            "10",
+            "RTD241106",
+            "Rangkaian Listrik",
+            "2",
+            "4",
+            "A"
+          ],
+          [
+            "11",
+            "RTD242106",
+            "Praktikum Teknik Digital",
+            "2",
+            "4",
+            "A"
+          ],
+          [
+            "12",
+            "RTD242108",
+            "Praktikum Dasar Teknik Elektronika",
+            "2",
+            "4",
+            "B+"
+          ],
+          [
+            "13",
+            "RTD242101",
+            "Matematika Teknik II",
+            "2",
+            "3",
+            "B+"
+          ],
+          [
+            "14",
+            "RTD242109",
+            "Praktikum Rangkaian Listrik",
+            "2",
+            "4",
+            "B+"
+          ],
+          [
+            "15",
+            "RTD242102",
+            "Medan Elektromagnetik",
+            "2",
+            "3",
+            "B+"
+          ],
+          [
+            "16",
+            "RTD242104",
+            "Saluran Transmisi dan Gelombang Mikro",
+            "2",
+            "3",
+            "B+"
+          ],
+          [
+            "17",
+            "RTD242107",
+            "Praktikum Pemrograman Komputer",
+            "2",
+            "4",
+            "A"
+          ],
+          [
+            "18",
+            "RTD242105",
+            "Sistem Modulasi dan Multiplexing",
+            "2",
+            "3",
+            "A"
+          ],
+          [
+            "19",
+            "RTD242103",
+            "Sistem Komunikasi Radio",
+            "2",
+            "3",
+            "A"
+          ],
+          [
+            "20",
+            "RTD243110",
+            "Praktikum Sistem Modulasi dan Multiplexing",
+            "2",
+            "4",
+            "B+"
+          ],
+          [
+            "21",
+            "RTD243107",
+            "Praktikum Sistem Komunikasi Radio",
+            "2",
+            "4",
+            "B"
+          ],
+          [
+            "22",
+            "RTD243108",
+            "Workshop Jaringan Komputer",
+            "3",
+            "6",
+            "A"
+          ],
+          [
+            "23",
+            "RTD243109",
+            "Praktikum Saluran Transmisi dan Gelombang Mikro",
+            "2",
+            "4",
+            "A"
+          ],
+          [
+            "24",
+            "RTD243104",
+            "Sistem Komunikasi Fiber Optik",
+            "2",
+            "3",
+            "A"
+          ],
+          [
+            "25",
+            "RTD243001",
+            "Agama",
+            "2",
+            "2",
+            "B+"
+          ],
+          [
+            "26",
+            "RTD243106",
+            "Workshop Mikrokontroler",
+            "3",
+            "6",
+            "A"
+          ],
+          [
+            "27",
+            "RTD243102",
+            "Antena",
+            "2",
+            "3",
+            "B+"
+          ],
+          [
+            "28",
+            "RTD243105",
+            "Workshop Rekayasa Trafik",
+            "2",
+            "5",
+            "B+"
+          ],
+          [
+            "29",
+            "RTD243103",
+            "Sistem Komunikasi Seluler",
+            "2",
+            "3",
+            "B+"
+          ]
+        ]
+      },
+      {
+        "index": 1,
+        "headers": [
+          "NO",
+          "NIM",
+          "NAMA",
+          "PROGRAM STUDI",
+          "TAHUN AKADEMIK",
+          "KETUA JURUSAN",
+          "STATUS",
+          "CETAK"
+        ],
+        "rows": [
+          [
+            "1",
+            "244101060077",
+            "MUHAMMAD FAKHRI ZAMANI",
+            "D-IV Jaringan Telekomunikasi Digital",
+            "2024/2025 Ganjil",
+            "Prof. Ir. Mohammad Noor Hidayat, S.T., M.Sc., Ph.D.",
+            "selesai",
+            "Cetak"
+          ],
+          [
+            "2",
+            "244101060077",
+            "MUHAMMAD FAKHRI ZAMANI",
+            "D-IV Jaringan Telekomunikasi Digital",
+            "2024/2025 Genap",
+            "Prof. Ir. Mohammad Noor Hidayat, S.T., M.Sc., Ph.D.",
+            "selesai",
+            "Cetak"
+          ],
+          [
+            "3",
+            "244101060077",
+            "MUHAMMAD FAKHRI ZAMANI",
+            "D-IV Jaringan Telekomunikasi Digital",
+            "2025/2026 Ganjil",
+            "Prof. Ir. Mohammad Noor Hidayat, S.T., M.Sc., Ph.D.",
+            "selesai",
+            "Cetak"
+          ]
+        ]
+      },
+      {
+        "index": 2,
+        "headers": [],
+        "rows": [
+          [
+            "",
+            "KEMENTERIAN RISET, TEKNOLOGI DAN PENDIDIKAN TINGGI\n\t\t\t\tPOLITEKNIK NEGERI MALANG\n\t\t\t\t\n\t\t\t\t\tJl. Soekarno Hatta No. 9 Malang 65141\n\t\t\t\t\tTelepon (0341) 404424 - 404425; Fax (0341) 404420\n\t\t\t\t\thttp://www.polinema.ac.id",
+            ""
+          ]
+        ]
+      }
+    ],
+    "cards": [
+      {
+        "index": 0,
+        "class": "alert alert-info main-alert-error hide",
+        "content": "Terdapat beberapa kesalahan input. Mohon periksa ulang data berikut"
+      }
+    ],
+    "lists": [
+      {
+        "index": 0,
+        "items": [
+          "",
+          "244101060077 / MUHAMMAD F.Z",
+          "Change Password",
+          "Log Out"
+        ]
+      },
+      {
+        "index": 2,
+        "items": [
+          "Change Password",
+          "Log Out"
+        ]
+      },
+      {
+        "index": 3,
+        "items": [
+          "",
+          "Beranda",
+          "Message",
+          "Ganti Password",
+          "General",
+          "Biodata Mahasiswa",
+          "Verifikasi Data Mahasiswa",
+          "Update NISN dan Vaksin",
+          "Foto KTM",
+          "KTM Virtual",
+          "Permintaan KTM",
+          "Riwayat Status dan Kelas",
+          "BPJS Kesehatan",
+          "Akademik\nKalender Akademik\nKartu Rencana Studi (KRS)\nLinkAja - Paket Data 50GB\nJadwal Perkuliahan\nNilai Mahasiswa\nLMS\nData SKPI\nPresensi\nKompetisi Mahasiswa\nPrestasi Mahasiswa",
+          "Kalender Akademik",
+          "Kartu Rencana Studi (KRS)",
+          "LinkAja - Paket Data 50GB",
+          "Jadwal Perkuliahan",
+          "Nilai Mahasiswa",
+          "LMS",
+          "Data SKPI",
+          "Presensi",
+          "Kompetisi Mahasiswa",
+          "Prestasi Mahasiswa",
+          "UKT",
+          "Pembayaran UKT",
+          "Keringanan UKT",
+          "Bantuan UKT Covid-19",
+          "Surat & Kuesioner",
+          "Permintaan Surat",
+          "Riwayat Permintaan Surat",
+          "Kuesioner",
+          "Kuesioner Akademik",
+          "Tingkat akhir",
+          "PKL",
+          "Tugas Akhir / Skripsi",
+          "Foto Ijazah",
+          "Kuesioner Tingkat Akhir"
+        ]
+      },
+      {
+        "index": 4,
+        "items": [
+          "Biodata Mahasiswa",
+          "Verifikasi Data Mahasiswa",
+          "Update NISN dan Vaksin",
+          "Foto KTM",
+          "KTM Virtual",
+          "Permintaan KTM",
+          "Riwayat Status dan Kelas",
+          "BPJS Kesehatan"
+        ]
+      },
+      {
+        "index": 5,
+        "items": [
+          "Kalender Akademik",
+          "Kartu Rencana Studi (KRS)",
+          "LinkAja - Paket Data 50GB",
+          "Jadwal Perkuliahan",
+          "Nilai Mahasiswa",
+          "LMS",
+          "Data SKPI",
+          "Presensi",
+          "Kompetisi Mahasiswa",
+          "Prestasi Mahasiswa"
+        ]
+      },
+      {
+        "index": 6,
+        "items": [
+          "Pembayaran UKT",
+          "Keringanan UKT",
+          "Bantuan UKT Covid-19"
+        ]
+      },
+      {
+        "index": 7,
+        "items": [
+          "Permintaan Surat",
+          "Riwayat Permintaan Surat",
+          "Kuesioner",
+          "Kuesioner Akademik"
+        ]
+      },
+      {
+        "index": 8,
+        "items": [
+          "PKL",
+          "Tugas Akhir / Skripsi",
+          "Foto Ijazah",
+          "Kuesioner Tingkat Akhir"
+        ]
+      },
+      {
+        "index": 9,
+        "items": [
+          "Siakad",
+          "Beranda",
+          "Welcome"
+        ]
+      },
+      {
+        "index": 10,
+        "items": [
+          "Nilai Akademik Per Semester",
+          "Rangkuman Nilai akademik",
+          "Status Permintaan TTD KHS"
+        ]
+      }
+    ]
+  },
+  "jadwal": {
+    "url": "https://siakad.polinema.ac.id/mahasiswa/jadwal/index/gm/akademik",
+    "title": "SIAKAD 3 | Sistem Informasi Akademik",
+    "tables": [
+      {
+        "index": 0,
+        "headers": [
+          "NO",
+          "HARI",
+          "JAM",
+          "KODE MK",
+          "MATA KULIAH",
+          "DOSEN",
+          "IDZOOM",
+          "PASSCODE",
+          "LINK URL"
+        ],
+        "rows": [
+          [
+            "1",
+            "",
+            "",
+            "RTD244001",
+            "Pendidikan Pancasila",
+            "-",
+            "",
+            "",
+            ""
+          ],
+          [
+            "2",
+            "",
+            "",
+            "RTD244102",
+            "Jaringan Telekomunikasi",
+            "-",
+            "",
+            "",
+            ""
+          ],
+          [
+            "3",
+            "",
+            "",
+            "RTD244103",
+            "Pemrosesan Sinyal Digital",
+            "-",
+            "",
+            "",
+            ""
+          ],
+          [
+            "4",
+            "",
+            "",
+            "RTD244104",
+            "IoT dan WSN",
+            "-",
+            "",
+            "",
+            ""
+          ],
+          [
+            "5",
+            "",
+            "",
+            "RTD244105",
+            "Praktikum Sistem Komunikasi Fiber Optik",
+            "-",
+            "",
+            "",
+            ""
+          ],
+          [
+            "6",
+            "",
+            "",
+            "RTD244106",
+            "Praktikum Sistem Komunikasi Seluler",
+            "-",
+            "",
+            "",
+            ""
+          ],
+          [
+            "7",
+            "",
+            "",
+            "RTD244107",
+            "Workshop Elektronika Telekomunikasi",
+            "-",
+            "",
+            "",
+            ""
+          ],
+          [
+            "8",
+            "",
+            "",
+            "RTD244108",
+            "Workshop Pengolahan Citra",
+            "-",
+            "",
+            "",
+            ""
+          ],
+          [
+            "9",
+            "",
+            "",
+            "RTD244109",
+            "Praktikum Antena",
+            "-",
+            "",
+            "",
+            ""
+          ],
+          [
+            "10",
+            "",
+            "",
+            "RTD244110",
+            "Workshop Sistem Keamanan Jaringan",
+            "-",
+            "",
+            "",
+            ""
+          ]
+        ]
+      },
+      {
+        "index": 1,
+        "headers": [],
+        "rows": [
+          [
+            "",
+            "KEMENTERIAN RISET, TEKNOLOGI DAN PENDIDIKAN TINGGI\n\t\t\t\tPOLITEKNIK NEGERI MALANG\n\t\t\t\t\n\t\t\t\t\tJl. Soekarno Hatta No. 9 Malang 65141\n\t\t\t\t\tTelepon (0341) 404424 - 404425; Fax (0341) 404420\n\t\t\t\t\thttp://www.polinema.ac.id",
+            ""
+          ]
+        ]
+      }
+    ],
+    "cards": [
+      {
+        "index": 0,
+        "class": "alert alert-info main-alert-error hide",
+        "content": "Terdapat beberapa kesalahan input. Mohon periksa ulang data berikut"
+      }
+    ],
+    "lists": [
+      {
+        "index": 0,
+        "items": [
+          "",
+          "244101060077 / MUHAMMAD F.Z",
+          "Change Password",
+          "Log Out"
+        ]
+      },
+      {
+        "index": 2,
+        "items": [
+          "Change Password",
+          "Log Out"
+        ]
+      },
+      {
+        "index": 3,
+        "items": [
+          "",
+          "Beranda",
+          "Message",
+          "Ganti Password",
+          "General",
+          "Biodata Mahasiswa",
+          "Verifikasi Data Mahasiswa",
+          "Update NISN dan Vaksin",
+          "Foto KTM",
+          "KTM Virtual",
+          "Permintaan KTM",
+          "Riwayat Status dan Kelas",
+          "BPJS Kesehatan",
+          "Akademik\nKalender Akademik\nKartu Rencana Studi (KRS)\nLinkAja - Paket Data 50GB\nJadwal Perkuliahan\nNilai Mahasiswa\nLMS\nData SKPI\nPresensi\nKompetisi Mahasiswa\nPrestasi Mahasiswa",
+          "Kalender Akademik",
+          "Kartu Rencana Studi (KRS)",
+          "LinkAja - Paket Data 50GB",
+          "Jadwal Perkuliahan",
+          "Nilai Mahasiswa",
+          "LMS",
+          "Data SKPI",
+          "Presensi",
+          "Kompetisi Mahasiswa",
+          "Prestasi Mahasiswa",
+          "UKT",
+          "Pembayaran UKT",
+          "Keringanan UKT",
+          "Bantuan UKT Covid-19",
+          "Surat & Kuesioner",
+          "Permintaan Surat",
+          "Riwayat Permintaan Surat",
+          "Kuesioner",
+          "Kuesioner Akademik",
+          "Tingkat akhir",
+          "PKL",
+          "Tugas Akhir / Skripsi",
+          "Foto Ijazah",
+          "Kuesioner Tingkat Akhir"
+        ]
+      },
+      {
+        "index": 4,
+        "items": [
+          "Biodata Mahasiswa",
+          "Verifikasi Data Mahasiswa",
+          "Update NISN dan Vaksin",
+          "Foto KTM",
+          "KTM Virtual",
+          "Permintaan KTM",
+          "Riwayat Status dan Kelas",
+          "BPJS Kesehatan"
+        ]
+      },
+      {
+        "index": 5,
+        "items": [
+          "Kalender Akademik",
+          "Kartu Rencana Studi (KRS)",
+          "LinkAja - Paket Data 50GB",
+          "Jadwal Perkuliahan",
+          "Nilai Mahasiswa",
+          "LMS",
+          "Data SKPI",
+          "Presensi",
+          "Kompetisi Mahasiswa",
+          "Prestasi Mahasiswa"
+        ]
+      },
+      {
+        "index": 6,
+        "items": [
+          "Pembayaran UKT",
+          "Keringanan UKT",
+          "Bantuan UKT Covid-19"
+        ]
+      },
+      {
+        "index": 7,
+        "items": [
+          "Permintaan Surat",
+          "Riwayat Permintaan Surat",
+          "Kuesioner",
+          "Kuesioner Akademik"
+        ]
+      },
+      {
+        "index": 8,
+        "items": [
+          "PKL",
+          "Tugas Akhir / Skripsi",
+          "Foto Ijazah",
+          "Kuesioner Tingkat Akhir"
+        ]
+      },
+      {
+        "index": 9,
+        "items": [
+          "Siakad",
+          "Beranda",
+          "Welcome"
+        ]
+      }
+    ]
+  },
+  "lms": {
+    "connected": true,
+    "courses": [
+      {
+        "title": "Praktikum Sistem Modulasi dan Multiplexing",
+        "program": "",
+        "url": ""
+      },
+      {
+        "title": "Praktikum Saluran Transmisi dan Gelombang Mikro",
+        "program": "",
+        "url": ""
+      },
+      {
+        "title": "Workshop Jaringan Komputer",
+        "program": "",
+        "url": ""
+      },
+      {
+        "title": "Praktikum Sistem Komunikasi Radio",
+        "program": "",
+        "url": ""
+      },
+      {
+        "title": "Workshop Mikrokontroler",
+        "program": "",
+        "url": ""
+      },
+      {
+        "title": "Workshop Rekayasa Trafik",
+        "program": "",
+        "url": ""
+      },
+      {
+        "title": "Sistem Komunikasi Fiber Optik",
+        "program": "",
+        "url": ""
+      },
+      {
+        "title": "Sistem Komunikasi Seluler",
+        "program": "",
+        "url": ""
+      },
+      {
+        "title": "Antena",
+        "program": "",
+        "url": ""
+      },
+      {
+        "title": "Agama",
+        "program": "",
+        "url": ""
+      }
+    ],
+    "assignments": [
+      {
+        "title": "Jaringan Wireless (Essay)",
+        "course": "Workshop Jaringan Komputer",
+        "pertemuan": "Pertemuan ke 5",
+        "type": "Assignment/Quiz",
+        "dueDate": "Check in LMS",
+        "status": "Active"
+      },
+      {
+        "title": "Pengumpulan Quiz",
+        "course": "Workshop Jaringan Komputer",
+        "pertemuan": "Pertemuan ke 13",
+        "type": "Assignment/Quiz",
+        "dueDate": "Check in LMS",
+        "status": "Active"
+      },
+      {
+        "title": "Quiz 2D",
+        "course": "Workshop Jaringan Komputer",
+        "pertemuan": "Pertemuan ke 13",
+        "type": "Assignment/Quiz",
+        "dueDate": "Check in LMS",
+        "status": "Active"
+      },
+      {
+        "title": "Tugas 25 September 2025_2E",
+        "course": "Sistem Komunikasi Seluler",
+        "pertemuan": "Pertemuan ke 16",
+        "type": "Assignment/Quiz",
+        "dueDate": "Check in LMS",
+        "status": "Active"
+      },
+      {
+        "title": "Tugas 25 September 2025_2F",
+        "course": "Sistem Komunikasi Seluler",
+        "pertemuan": "Pertemuan ke 16",
+        "type": "Assignment/Quiz",
+        "dueDate": "Check in LMS",
+        "status": "Active"
+      },
+      {
+        "title": "Tugas 30 September 2025_2D",
+        "course": "Sistem Komunikasi Seluler",
+        "pertemuan": "Pertemuan ke 16",
+        "type": "Assignment/Quiz",
+        "dueDate": "Check in LMS",
+        "status": "Active"
+      },
+      {
+        "title": "Tugas 1 Oktober 2025_2G",
+        "course": "Sistem Komunikasi Seluler",
+        "pertemuan": "Pertemuan ke 16",
+        "type": "Assignment/Quiz",
+        "dueDate": "Check in LMS",
+        "status": "Active"
+      },
+      {
+        "title": "Tugas 1 Oktober 2025_2E",
+        "course": "Sistem Komunikasi Seluler",
+        "pertemuan": "Pertemuan ke 16",
+        "type": "Assignment/Quiz",
+        "dueDate": "Check in LMS",
+        "status": "Active"
+      },
+      {
+        "title": "Tugas 1 Oktober 2025_2F",
+        "course": "Sistem Komunikasi Seluler",
+        "pertemuan": "Pertemuan ke 16",
+        "type": "Assignment/Quiz",
+        "dueDate": "Check in LMS",
+        "status": "Active"
+      },
+      {
+        "title": "Tugas Propagasi Gelombang Radio_2D",
+        "course": "Sistem Komunikasi Seluler",
+        "pertemuan": "Pertemuan ke 16",
+        "type": "Assignment/Quiz",
+        "dueDate": "Check in LMS",
+        "status": "Active"
+      },
+      {
+        "title": "Tugas Propagasi Gelombang Radio_2G",
+        "course": "Sistem Komunikasi Seluler",
+        "pertemuan": "Pertemuan ke 16",
+        "type": "Assignment/Quiz",
+        "dueDate": "Check in LMS",
+        "status": "Active"
+      },
+      {
+        "title": "Tugas Propagasi Gelombang Radio_2E",
+        "course": "Sistem Komunikasi Seluler",
+        "pertemuan": "Pertemuan ke 16",
+        "type": "Assignment/Quiz",
+        "dueDate": "Check in LMS",
+        "status": "Active"
+      },
+      {
+        "title": "Tugas Propagasi Gelombang Radio_2F",
+        "course": "Sistem Komunikasi Seluler",
+        "pertemuan": "Pertemuan ke 16",
+        "type": "Assignment/Quiz",
+        "dueDate": "Check in LMS",
+        "status": "Active"
+      }
+    ],
+    "calendar": []
+  },
+  "timestamp": "2026-02-08T10:42:03.422Z",
+  "nim": "244101060077"
+}

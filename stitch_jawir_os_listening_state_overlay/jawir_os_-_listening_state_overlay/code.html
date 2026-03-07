@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jawir OS - Listening State</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#dab80b",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#181711",
+                        "surface-dark": "#27251b",
+                        "surface-border": "#393628",
+                        "text-muted": "#bab59c",
+                        "cream-pill": "#fdfcf5",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "2xl": "2rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-dark font-display text-white overflow-hidden h-screen w-screen selection:bg-primary/30">
+<!-- Main Layout Container -->
+<div class="relative flex h-full w-full bg-background-dark">
+<!-- Sidebar (Background Layer) -->
+<aside class="flex w-72 flex-col border-r border-surface-border bg-background-dark px-6 py-6 h-full z-0 opacity-40 blur-[1px]">
+<div class="flex flex-col gap-2 mb-8">
+<h1 class="text-white text-xl font-bold leading-normal tracking-tight">Jawir OS</h1>
+<p class="text-text-muted text-xs font-normal">v2.0 Premium Edition</p>
+</div>
+<nav class="flex flex-col gap-2">
+<div class="flex items-center gap-3 px-3 py-3 rounded-xl bg-surface-border/50 text-white">
+<span class="material-symbols-outlined">home</span>
+<p class="text-sm font-medium">Dashboard</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-3 rounded-xl text-text-muted hover:bg-surface-border/30 transition-colors">
+<span class="material-symbols-outlined">apps</span>
+<p class="text-sm font-medium">Applications</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-3 rounded-xl text-text-muted hover:bg-surface-border/30 transition-colors">
+<span class="material-symbols-outlined">folder_open</span>
+<p class="text-sm font-medium">Files</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-3 rounded-xl text-text-muted hover:bg-surface-border/30 transition-colors">
+<span class="material-symbols-outlined">smart_toy</span>
+<p class="text-sm font-medium">Assistant</p>
+</div>
+<div class="mt-4 pt-4 border-t border-surface-border">
+<div class="flex items-center gap-3 px-3 py-3 rounded-xl text-text-muted hover:bg-surface-border/30 transition-colors">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium">Settings</p>
+</div>
+</div>
+</nav>
+</aside>
+<!-- Main Content Area (Background Layer) -->
+<main class="flex-1 flex flex-col h-full min-w-0 bg-background-dark relative z-0">
+<!-- Top Nav -->
+<header class="flex items-center justify-between border-b border-surface-border px-8 py-5 opacity-40 blur-[1px]">
+<div class="flex items-center gap-4">
+<h2 class="text-xl font-bold">System Overview</h2>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative">
+<span class="material-symbols-outlined text-text-muted">notifications</span>
+<div class="absolute top-0 right-0 size-2 bg-primary rounded-full"></div>
+</div>
+<div class="size-10 rounded-full bg-cover bg-center border border-surface-border" data-alt="User profile avatar placeholder" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDnUYpYoO_qEiwPVhG8csIhcTQB4jYlTnMx-3OvZl_7Fk0ovIMGjsohL82k73Uxpmp45oFzCuQzF2hTMgOxzbtZfcRVXoKyG2ngvmjTSW1VPKNGO0_dHpxvAOUYGaNVRDLftQDvFs4jwz3RI7--t4omlaoTS9h299Lml4MlsI4_S63sRBAZqw3bN8-vsvT6DAwQftdumcx8G3J7RFk_SJL414xHVl__P6p6cGgvyb6RT751oXVuMMm0mOJ9B3FtMGi3mDbF0QUCJ6kR');"></div>
+</div>
+</header>
+<!-- Dashboard Grid -->
+<div class="flex-1 p-8 overflow-y-auto opacity-30 blur-[2px] pointer-events-none">
+<!-- Stats Row -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<div class="bg-surface-dark border border-surface-border rounded-xl p-6">
+<div class="flex justify-between items-start mb-4">
+<span class="text-text-muted font-medium">CPU Load</span>
+<span class="material-symbols-outlined text-primary">memory</span>
+</div>
+<p class="text-3xl font-bold text-white mb-1">12%</p>
+<p class="text-sm text-green-500 font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">trending_down</span> Optimal
+                        </p>
+</div>
+<div class="bg-surface-dark border border-surface-border rounded-xl p-6">
+<div class="flex justify-between items-start mb-4">
+<span class="text-text-muted font-medium">RAM Usage</span>
+<span class="material-symbols-outlined text-primary">view_agenda</span>
+</div>
+<p class="text-3xl font-bold text-white mb-1">4.2 GB</p>
+<p class="text-sm text-text-muted font-medium">of 16 GB</p>
+</div>
+<div class="bg-surface-dark border border-surface-border rounded-xl p-6">
+<div class="flex justify-between items-start mb-4">
+<span class="text-text-muted font-medium">Network</span>
+<span class="material-symbols-outlined text-primary">language</span>
+</div>
+<p class="text-3xl font-bold text-white mb-1">120 Mbps</p>
+<p class="text-sm text-primary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">bolt</span> Active
+                        </p>
+</div>
+</div>
+<!-- Charts Area -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<div class="bg-surface-dark border border-surface-border rounded-xl p-6 h-64 flex flex-col justify-between">
+<p class="text-white font-medium mb-4">Activity Log</p>
+<div class="flex items-end justify-between h-full gap-2 px-2">
+<div class="w-full bg-surface-border rounded-t-sm h-[40%]"></div>
+<div class="w-full bg-surface-border rounded-t-sm h-[70%]"></div>
+<div class="w-full bg-primary/20 rounded-t-sm h-[50%]"></div>
+<div class="w-full bg-primary rounded-t-sm h-[80%]"></div>
+<div class="w-full bg-surface-border rounded-t-sm h-[60%]"></div>
+<div class="w-full bg-surface-border rounded-t-sm h-[30%]"></div>
+</div>
+</div>
+<div class="bg-surface-dark border border-surface-border rounded-xl p-6 h-64">
+<p class="text-white font-medium mb-4">Power Efficiency</p>
+<div class="w-full h-full flex items-center justify-center">
+<div class="size-32 rounded-full border-4 border-surface-border border-t-primary flex items-center justify-center">
+<span class="text-xl font-bold">94%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Backdrop Dimmer Overlay -->
+<div class="absolute inset-0 bg-black/60 backdrop-blur-sm z-40 transition-all duration-500"></div>
+<!-- LISTENING OVERLAY COMPONENT -->
+<div class="absolute inset-x-0 bottom-12 z-50 flex justify-center items-end px-4">
+<div class="relative flex flex-col items-center w-full max-w-3xl bg-cream-pill rounded-[2.5rem] p-8 pb-6 shadow-[0_20px_60px_-10px_rgba(0,0,0,0.5),0_0_40px_rgba(218,183,11,0.1)] border border-[#e6dec0]/50 overflow-hidden">
+<!-- Gold Accent Top Line -->
+<div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-primary/40 to-transparent"></div>
+<!-- Header / Status -->
+<div class="flex items-center gap-2 mb-6 opacity-60">
+<span class="size-2 rounded-full bg-primary animate-pulse"></span>
+<p class="text-[#5c5540] text-xs font-bold tracking-widest uppercase">Mendengar...</p>
+</div>
+<!-- Voice Visualizer & Main Interaction -->
+<div class="flex flex-col items-center w-full gap-8">
+<!-- Waveform + Icon Cluster -->
+<div class="flex items-center justify-center gap-3 h-20 w-full">
+<!-- Left Wave -->
+<div class="flex items-center gap-1.5 opacity-80">
+<div class="w-1.5 h-4 bg-primary rounded-full"></div>
+<div class="w-1.5 h-8 bg-primary rounded-full opacity-60"></div>
+<div class="w-1.5 h-12 bg-primary rounded-full opacity-80"></div>
+<div class="w-1.5 h-6 bg-primary rounded-full"></div>
+<div class="w-1.5 h-16 bg-primary rounded-full opacity-40"></div>
+<div class="w-1.5 h-10 bg-primary rounded-full"></div>
+</div>
+<!-- Central Mic Icon (Glowing) -->
+<div class="relative flex items-center justify-center size-20 mx-4">
+<!-- Pulse Ring 1 -->
+<div class="absolute inset-0 bg-primary/20 rounded-full animate-ping opacity-20"></div>
+<!-- Pulse Ring 2 -->
+<div class="absolute inset-2 bg-primary/10 rounded-full animate-pulse"></div>
+<div class="relative z-10 flex items-center justify-center size-14 bg-gradient-to-br from-[#eecf3d] to-[#bfa000] rounded-full shadow-lg shadow-primary/30 text-white">
+<span class="material-symbols-outlined text-[32px]">mic</span>
+</div>
+</div>
+<!-- Right Wave -->
+<div class="flex items-center gap-1.5 opacity-80">
+<div class="w-1.5 h-10 bg-primary rounded-full"></div>
+<div class="w-1.5 h-16 bg-primary rounded-full opacity-40"></div>
+<div class="w-1.5 h-6 bg-primary rounded-full"></div>
+<div class="w-1.5 h-12 bg-primary rounded-full opacity-80"></div>
+<div class="w-1.5 h-8 bg-primary rounded-full opacity-60"></div>
+<div class="w-1.5 h-4 bg-primary rounded-full"></div>
+</div>
+</div>
+<!-- Transcript -->
+<div class="text-center max-w-xl">
+<p class="text-[#2c281e] text-2xl md:text-3xl font-medium leading-tight tracking-tight">
+                            "Buatkan skema rangkaian buck converter 12V ke 5V..."
+                        </p>
+</div>
+<!-- Actions -->
+<div class="mt-2 flex items-center gap-4">
+<button class="group flex items-center gap-2 pl-2 pr-5 py-2 bg-[#ebe6d1] hover:bg-[#e3ddc2] rounded-full transition-colors cursor-pointer">
+<div class="size-8 rounded-full bg-white flex items-center justify-center shadow-sm">
+<div class="size-2.5 bg-red-500 rounded-sm"></div>
+</div>
+<span class="text-[#5c5540] text-sm font-semibold group-hover:text-[#2c281e]">Stop Listening</span>
+</button>
+</div>
+</div>
+<!-- Background Abstract Shape for Warmth -->
+<div class="absolute -bottom-20 -right-20 size-64 bg-[#f1e9c8] rounded-full blur-[60px] opacity-40 pointer-events-none"></div>
+<div class="absolute -top-20 -left-20 size-64 bg-primary/10 rounded-full blur-[60px] opacity-40 pointer-events-none"></div>
+</div>
+</div>
+</div>
+</body></html>

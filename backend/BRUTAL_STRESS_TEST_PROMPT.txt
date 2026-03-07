@@ -1,0 +1,117 @@
+MODE: BRUTAL_STRESS_TEST ✅
+TARGET: PAKAI 25 ITERASI PENUH (1 tool call per iterasi). JANGAN kasih final answer sebelum iterasi ke-25.
+ATURAN KERAS:
+- Setiap iterasi WAJIB tepat 1 ACTION tool call (tidak boleh 2 tool dalam 1 iterasi).
+- Setelah tiap tool: tulis OBSERVATION ringkas (<=5 baris) + EVALUATE lanjut ke step berikutnya.
+- Kalau tool error (auth/quota/dll): catat errornya, JANGAN STOP, lanjut step berikutnya.
+- Semua artefak yang dibuat wajib ada kata "DELETE" di judulnya biar gampang bersih-bersih.
+- Di iterasi 25, berikan ringkasan lengkap + link/id semua artefak + checklist cleanup.
+
+IKUTI STEP INI PERSIS (ITERASI 1 s/d 25):
+
+ITERASI 1 — TOOL: drive_list
+- List root drive / folder utama (kalau ada parameter path gunakan root).
+
+ITERASI 2 — TOOL: calendar_list_events
+- List event 7 hari ke depan (atau default), output ringkas.
+
+ITERASI 3 — TOOL: web_search
+- Query: "LangGraph TypedDict state drops undeclared fields streamer"
+
+ITERASI 4 — TOOL: web_search
+- Query: "ReAct pattern best practices tool use multi step agent"
+
+ITERASI 5 — TOOL: web_search
+- Query: "FastAPI WebSocket streaming progress updates example"
+
+ITERASI 6 — TOOL: web_search
+- Query: "LangChain StructuredTool caching quota retry patterns"
+
+ITERASI 7 — TOOL: run_python_code
+- Buat script yang:
+  1) bikin dataset 30 baris (kolom: id, topic, key_takeaway, risk, mitigation)
+  2) isi dataset berdasarkan 4 topik dari web_search (boleh ringkas/heuristik)
+  3) outputkan CSV string (print) + hitung SHA256 dari CSV (print)
+  4) simpan juga versi JSON (print singkat 3 item pertama)
+- Pastikan output mudah di-copy.
+
+ITERASI 8 — TOOL: generate_kicad_schematic
+- Generate schematic sederhana: Battery(5V) -> Switch -> Resistor(220R) -> LED -> GND.
+- Nama project/file: "JAWIR_BRUTAL_KICAD_DELETE"
+- Kalau tool minta format spesifik (netlist/components), isi sesuai kebutuhan minimal.
+
+ITERASI 9 — TOOL: sheets_create
+- Buat spreadsheet judul: "JAWIR BRUTAL TEST - Benchmark DELETE"
+- Sheet/tab default: "data" (kalau bisa), kalau tidak ya default.
+
+ITERASI 10 — TOOL: sheets_write
+- Tulis header di sheet: ["id","topic","key_takeaway","risk","mitigation","source"]
+- Lalu tulis 10 baris pertama dari CSV (id 1-10). source isi "web+python".
+
+ITERASI 11 — TOOL: sheets_write
+- Tulis baris 11-20 dari dataset.
+
+ITERASI 12 — TOOL: sheets_write
+- Tulis baris 21-30 dari dataset.
+- Tambahkan 2 baris ringkasan di bawahnya: total_rows=30 dan csv_sha256=<sha dari python>.
+
+ITERASI 13 — TOOL: sheets_read
+- Baca range yang mencakup header + beberapa baris (mis. A1:F8) untuk verifikasi.
+
+ITERASI 14 — TOOL: docs_create
+- Buat Google Doc judul: "JAWIR BRUTAL TEST - Report DELETE"
+- Isi dokumen wajib memuat:
+  - Ringkasan 4 hasil web_search (bullet)
+  - Catatan hasil python (sha256, jumlah baris)
+  - Referensi spreadsheet: tulis ID/link spreadsheet kalau ada dari tool result
+  - Status KiCad (sukses/gagal + output jika ada)
+  - Bagian "Cleanup" (apa yang harus dihapus)
+
+ITERASI 15 — TOOL: drive_search
+- Cari file dengan judul mengandung: "JAWIR BRUTAL TEST - Report DELETE"
+- Outputkan hasil teratas + link/id.
+
+ITERASI 16 — TOOL: drive_search
+- Cari file dengan judul mengandung: "JAWIR BRUTAL TEST - Benchmark DELETE"
+- Outputkan hasil teratas + link/id.
+
+ITERASI 17 — TOOL: forms_create
+- Buat form judul: "JAWIR BRUTAL TEST - Survey DELETE"
+- Deskripsi: "Form uji toolchain JAWIR OS — hapus setelah tes."
+
+ITERASI 18 — TOOL: forms_add_question
+- Tambah pertanyaan rating (1-5):
+  "Seberapa jelas streaming status THINKING/PLANNING/ACTION/OBSERVE?"
+
+ITERASI 19 — TOOL: forms_add_question
+- Tambah multiple choice:
+  "Tool mana yang paling stabil?"
+  Opsi: Web, Python, Sheets, Docs, Drive, Forms, Calendar, Desktop, KiCad
+
+ITERASI 20 — TOOL: forms_add_question
+- Tambah pertanyaan jawaban panjang:
+  "Error paling mengganggu (jika ada) dan saran perbaikan?"
+
+ITERASI 21 — TOOL: forms_read
+- Baca struktur form untuk memastikan 3 pertanyaan sudah masuk.
+
+ITERASI 22 — TOOL: gmail_search
+- Search Gmail dengan query: "JAWIR BRUTAL TEST" (atau subject contains).
+- Output ringkas jumlah hasil + 1 contoh (tanpa bocorin data sensitif).
+
+ITERASI 23 — TOOL: calendar_create_event
+- Buat event berjudul: "JAWIR BRUTAL TEST - DELETE"
+- Waktu: besok jam 10:00 (zona lokal) durasi 15 menit
+- Deskripsi event: cantumkan link/id Doc, Sheet, Form (dari hasil tool), dan catatan "hapus event ini setelah selesai".
+
+ITERASI 24 — TOOL: open_app
+- Buka aplikasi: "notepad"
+- (Tujuan: test desktop control). Jangan lakukan hal lain.
+
+ITERASI 25 — TOOL: close_app
+- Tutup aplikasi: "notepad"
+- SETELAH OBSERVATION iterasi 25, BARU kasih FINAL RESPONSE yang berisi:
+  1) daftar semua tool yang sukses/gagal + error message ringkas
+  2) link/id: Doc, Sheet, Form, Calendar event, hasil Drive search, dan output KiCad (kalau ada)
+  3) checklist cleanup (hapus Doc/Sheet/Form/Event + file KiCad jika dibuat)
+  4) indikator performa: total tool success count, total failure count

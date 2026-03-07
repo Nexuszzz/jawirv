@@ -1,0 +1,19 @@
+{
+  "name": "polinema-connector",
+  "version": "1.0.0",
+  "description": "Polinema SIAKAD & LMS Connector for JAWIR AI",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test_scraper.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "playwright": "^1.40.0",
+    "express": "^4.18.2",
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0"
+  }
+}

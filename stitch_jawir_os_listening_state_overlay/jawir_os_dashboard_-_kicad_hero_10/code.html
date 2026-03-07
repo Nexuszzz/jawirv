@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jawir OS - Security &amp; Privacy Settings</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#dab80b",
+                        "primary-hover": "#bfa10a",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#221f10",
+                        "coffee-dark": "#181711",
+                        "coffee-medium": "#2d2a1e",
+                        "coffee-light": "#393628",
+                        "cream": "#f1f0ea",
+                        "cream-muted": "#bab59c",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px
+        }
+        ::-webkit-scrollbar-track {
+            background: #181711
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #393628;
+            border-radius: 4px
+        }
+        .batik-trim {
+            background-color: #dab80b;
+            background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuASLlPyJf_OkIRQ5Mnkucw-ITiq-CrAc7F8RLXyngY-cPhvY5mvAvWLq2LU7VpbDt3nSkrNSjFlneCHK6BQbpzxIRwaoJWnTygZJC9sOkUYWawlAuBqzzxVAcg9ofJsTjKMrIhA2RkBVxcN7--c-kfFbvZ4__tNw5RZke3sPlwthJurTVhrtpwEJI_K2JT5E0ofgGmKc2_uN9_fHuyBVcFRSjMbnGWFe23OBCqqcf5feyR85IcgmYFXOFYGZ1ghOQCQibodALH0efWQ");
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            background: #dab80b;
+            margin-top: -6px;
+            cursor: pointer;
+            box-shadow: 0 0 0 4px rgba(218, 184, 11, 0.2);
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: #393628;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-white font-display overflow-hidden h-screen flex flex-col">
+<header class="flex-none z-50 bg-coffee-dark border-b border-coffee-light relative">
+<div class="absolute top-0 left-0 w-full h-1.5 batik-trim"></div>
+<div class="px-6 py-3 flex items-center justify-between mt-1.5">
+<div class="flex items-center gap-4">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-4xl">spa</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-white">Jawir OS</h1>
+</div>
+<div class="hidden md:flex items-center justify-center">
+<div class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-coffee-light border border-coffee-medium shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">settings</span>
+<span class="text-xs font-semibold text-primary uppercase tracking-wider">Mode Pengaturan</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex gap-1">
+<button class="p-2 rounded-lg text-white bg-coffee-light transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="p-2 rounded-lg text-cream-muted hover:text-white hover:bg-coffee-light transition-colors">
+<span class="material-symbols-outlined">history_edu</span>
+</button>
+</div>
+<div class="h-6 w-px bg-coffee-light mx-2"></div>
+<div class="size-9 rounded-full bg-cover bg-center border border-coffee-light" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnsHrsccBN9SckTBcb0FzP0SvKB4uBwghssMaUQT4vyjmG07Aw4jD0Exl9GRJ5Ov2Oyp9n5zyM1q-hGnZqjs-LHlO_Gx_l0kes1z9DxlezeMItPW-Im6XVEiaI43QO399_dkRoRxoWqRjufe1hza-tmdEyJIgnPZiaPLNUW081UH6nHY9hvDv3_6fp9L3TUG8LYBjCducZs511VfeEAUwL12EpuSSxPM6DmBU_2PaGdfOtuFsssW0TP-J3xRUhMZz10W5hNak6y2YR");'></div>
+</div>
+</div>
+</header>
+<div class="flex-1 flex overflow-hidden">
+<aside class="w-full md:w-[280px] lg:w-[320px] flex flex-col border-r border-coffee-light bg-[#1c1912] relative z-20 shadow-xl">
+<div class="p-6">
+<h2 class="text-xs font-bold text-cream-muted uppercase tracking-widest mb-6 px-2">Kategori Pengaturan</h2>
+<nav class="space-y-2">
+<button class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-cream-muted hover:text-white hover:bg-coffee-light transition-all text-left group">
+<span class="material-symbols-outlined text-[22px] group-hover:text-primary transition-colors">mic</span>
+<span class="font-medium">Suara &amp; Mikrofon</span>
+</button>
+<button class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-cream-muted hover:text-white hover:bg-coffee-light transition-all text-left group">
+<span class="material-symbols-outlined text-[22px] group-hover:text-primary transition-colors">hub</span>
+<span class="font-medium">Integrasi Layanan</span>
+</button>
+<button class="w-full flex items-center gap-3 px-4 py-3 rounded-xl bg-primary text-background-dark shadow-lg shadow-primary/20 text-left">
+<span class="material-symbols-outlined text-[22px]">security</span>
+<span class="font-bold">Keamanan</span>
+</button>
+<button class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-cream-muted hover:text-white hover:bg-coffee-light transition-all text-left group">
+<span class="material-symbols-outlined text-[22px] group-hover:text-primary transition-colors">palette</span>
+<span class="font-medium">Tampilan</span>
+</button>
+<button class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-cream-muted hover:text-white hover:bg-coffee-light transition-all text-left group">
+<span class="material-symbols-outlined text-[22px] group-hover:text-primary transition-colors">info</span>
+<span class="font-medium">Tentang Jawir OS</span>
+</button>
+</nav>
+</div>
+<div class="mt-auto p-6 border-t border-coffee-light">
+<div class="bg-coffee-medium rounded-xl p-4 border border-coffee-light flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">auto_awesome</span>
+<div>
+<p class="text-sm font-bold text-white">Jawir OS Pro</p>
+<p class="text-xs text-cream-muted">v2.4.0 (Stable)</p>
+</div>
+</div>
+</div>
+</aside>
+<main class="flex-1 bg-background-dark flex flex-col min-w-0 relative overflow-hidden">
+<div class="absolute inset-0 z-0 pointer-events-none opacity-5" style="background-image: radial-gradient(#dab80b 1px, transparent 1px); background-size: 32px 32px;"></div>
+<div class="h-1 w-full bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+<div class="relative z-10 flex flex-col h-full overflow-y-auto">
+<div class="p-8 lg:p-12 max-w-6xl mx-auto w-full space-y-10">
+<div class="flex items-end justify-between border-b border-coffee-light pb-6">
+<div>
+<div class="flex items-center gap-3 mb-2">
+<h2 class="text-3xl font-bold text-white tracking-tight">Keamanan &amp; Akses</h2>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-primary/20 text-primary border border-primary/30 uppercase tracking-wide">Shield Active</span>
+</div>
+<p class="text-cream-muted text-lg">Kelola privasi, izin sistem, dan proteksi biometrik.</p>
+</div>
+<div class="hidden sm:block">
+<button class="px-4 py-2 bg-coffee-light hover:bg-[#4a4638] text-white text-sm font-medium rounded-lg transition-colors flex items-center gap-2 border border-coffee-light/50 shadow-sm">
+<span class="material-symbols-outlined text-base text-primary">security_update_good</span>
+                                Audit Log
+                            </button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<div class="bg-coffee-medium rounded-2xl border border-coffee-light p-6 relative overflow-hidden group shadow-lg hover:border-primary/40 transition-colors">
+<div class="absolute top-0 right-0 p-4">
+<span class="material-symbols-outlined text-primary/20 text-5xl">warning_amber</span>
+</div>
+<div class="flex justify-between items-start mb-4 relative z-10">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-yellow-500/10 flex items-center justify-center text-yellow-500 border border-yellow-500/20">
+<span class="material-symbols-outlined">gpp_maybe</span>
+</div>
+<h3 class="text-lg font-bold text-white">Konfirmasi Aksi Berisiko</h3>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-coffee-dark peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<p class="text-sm text-cream-muted leading-relaxed max-w-sm">
+                                Memerlukan konfirmasi manual atau verifikasi suara untuk tugas berisiko tinggi seperti penghapusan file sistem.
+                            </p>
+</div>
+<div class="bg-coffee-medium rounded-2xl border border-coffee-light p-6 relative overflow-hidden group shadow-lg hover:border-primary/40 transition-colors">
+<div class="absolute top-0 right-0 p-4">
+<span class="material-symbols-outlined text-primary/20 text-5xl">fingerprint</span>
+</div>
+<div class="flex justify-between items-start mb-4 relative z-10">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary border border-primary/20">
+<span class="material-symbols-outlined">lock</span>
+</div>
+<h3 class="text-lg font-bold text-white">Kunci Biometrik</h3>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-coffee-dark peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<p class="text-sm text-cream-muted leading-relaxed max-w-sm">
+                                Wajibkan otentikasi biometrik (sidik jari/wajah) saat aplikasi Jawir OS dibuka pertama kali.
+                            </p>
+</div>
+</div>
+<div class="bg-coffee-medium rounded-2xl border border-coffee-light shadow-lg overflow-hidden">
+<div class="px-6 py-5 border-b border-coffee-light flex items-center justify-between bg-coffee-medium/50">
+<h3 class="text-lg font-bold text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">admin_panel_settings</span>
+                                Batasan Kontrol Aplikasi
+                            </h3>
+<button class="text-xs text-primary hover:text-primary-hover font-medium underline">Ubah Kebijakan</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-coffee-light">
+<div class="p-6 bg-[#2d2a1e]/50">
+<h4 class="text-sm font-bold text-[#25D366] uppercase tracking-wider mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">check_circle</span>
+                                    Tindakan Diizinkan
+                                </h4>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-cream text-sm">
+<div class="size-1.5 rounded-full bg-[#25D366]"></div>
+<span>Buka aplikasi terinstall</span>
+</li>
+<li class="flex items-center gap-3 text-cream text-sm">
+<div class="size-1.5 rounded-full bg-[#25D366]"></div>
+<span>Pencarian Web &amp; Informasi Umum</span>
+</li>
+<li class="flex items-center gap-3 text-cream text-sm">
+<div class="size-1.5 rounded-full bg-[#25D366]"></div>
+<span>Pemutaran Media (Musik/Video)</span>
+</li>
+<li class="flex items-center gap-3 text-cream text-sm">
+<div class="size-1.5 rounded-full bg-[#25D366]"></div>
+<span>Membaca &amp; Mengirim Pesan (WhatsApp)</span>
+</li>
+</ul>
+</div>
+<div class="p-6 bg-[#2d2a1e]">
+<h4 class="text-sm font-bold text-red-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">block</span>
+                                    Tindakan Dibatasi
+                                </h4>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-cream-muted text-sm opacity-80">
+<div class="size-1.5 rounded-full bg-red-400"></div>
+<span>Hapus file sistem &amp; direktori root</span>
+</li>
+<li class="flex items-center gap-3 text-cream-muted text-sm opacity-80">
+<div class="size-1.5 rounded-full bg-red-400"></div>
+<span>Format drive penyimpanan eksternal</span>
+</li>
+<li class="flex items-center gap-3 text-cream-muted text-sm opacity-80">
+<div class="size-1.5 rounded-full bg-red-400"></div>
+<span>Akses kamera latar belakang (tanpa izin)</span>
+</li>
+<li class="flex items-center gap-3 text-cream-muted text-sm opacity-80">
+<div class="size-1.5 rounded-full bg-red-400"></div>
+<span>Pembelian dalam aplikasi otomatis</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<h3 class="text-lg font-bold text-white flex items-center gap-2 px-1">
+<span class="material-symbols-outlined text-primary">history</span>
+                            Riwayat Akses Terakhir
+                        </h3>
+<div class="bg-coffee-medium rounded-2xl border border-coffee-light overflow-hidden shadow-lg">
+<div class="overflow-x-auto">
+<table class="w-full text-left text-sm">
+<thead class="bg-coffee-dark text-cream-muted border-b border-coffee-light">
+<tr>
+<th class="px-6 py-4 font-semibold uppercase text-xs tracking-wider">Perangkat</th>
+<th class="px-6 py-4 font-semibold uppercase text-xs tracking-wider">Lokasi</th>
+<th class="px-6 py-4 font-semibold uppercase text-xs tracking-wider">Waktu</th>
+<th class="px-6 py-4 font-semibold uppercase text-xs tracking-wider text-right">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-coffee-light/50">
+<tr class="hover:bg-coffee-light/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-cream-muted">laptop_mac</span>
+<div>
+<div class="font-medium text-white">MacBook Pro M1</div>
+<div class="text-xs text-cream-muted">Chrome • macOS 14.2</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-cream">Jakarta, ID</td>
+<td class="px-6 py-4 text-cream">
+<div class="flex items-center gap-1.5">
+<span class="size-2 rounded-full bg-green-500 animate-pulse"></span>
+<span>Sedang Aktif</span>
+</div>
+</td>
+<td class="px-6 py-4 text-right">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-500/10 text-green-400 border border-green-500/20">
+                                                    Terverifikasi
+                                                </span>
+</td>
+</tr>
+<tr class="hover:bg-coffee-light/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-cream-muted">smartphone</span>
+<div>
+<div class="font-medium text-white">iPhone 13</div>
+<div class="text-xs text-cream-muted">Safari • iOS 17.1</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-cream">Bandung, ID</td>
+<td class="px-6 py-4 text-cream-muted">2 jam yang lalu</td>
+<td class="px-6 py-4 text-right">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-coffee-light text-cream-muted border border-coffee-light">
+                                                    Sesi Berakhir
+                                                </span>
+</td>
+</tr>
+<tr class="hover:bg-coffee-light/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-cream-muted">desktop_windows</span>
+<div>
+<div class="font-medium text-white">Windows PC</div>
+<div class="text-xs text-cream-muted">Edge • Windows 11</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-cream">Surabaya, ID</td>
+<td class="px-6 py-4 text-cream-muted">Kemarin, 14:30</td>
+<td class="px-6 py-4 text-right">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-500/10 text-red-400 border border-red-500/20" title="Percobaan login gagal">
+                                                    Gagal
+                                                </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="h-8"></div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

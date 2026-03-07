@@ -1,0 +1,15 @@
+# JAWIR OS Computer Use - Requirements
+# Browser automation dengan Gemini Vision
+# Install: pip install -r requirements_computer_use.txt
+
+# Google GenAI SDK (untuk Gemini API)
+google-genai>=1.0.0
+
+# Playwright (browser automation)
+playwright>=1.40.0
+
+# Termcolor (output formatting)
+termcolor>=2.3.0
+
+# Rich (pretty console output)
+rich>=13.0.0
